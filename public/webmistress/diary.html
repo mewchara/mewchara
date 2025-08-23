@@ -1,0 +1,313 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>diary of a batgirl</title>    
+    <script type="text/javascript">
+        (function titleScroller(text) {
+            document.title = text;
+            console.log(text);
+            setTimeout(function () {
+                titleScroller(text.substr(1) + text.substr(0, 1));
+            }, 100);
+        }("diary of a batgirl.."));
+    </script>
+    <link rel="icon" type="image/x-icon" href="/personal/crown.gif">
+
+
+    <style>
+        
+        #wrapper::before {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: url(https://i.pinimg.com/originals/dd/13/ef/dd13efed9bc1409c1791b14d3a45e6f1.gif);
+            z-index: 2;
+            pointer-events: none;
+            opacity: 6%;
+            filter: contrast(1);
+        }
+
+        #wrapper::after {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: rgba(18, 16, 16, 0.1);
+            opacity: 0;
+            z-index: 2;
+            pointer-events: none;
+            animation: flicker 0s infinite;
+        }
+
+        @keyframes flicker {
+            0% { opacity: 0.1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 0.1; }
+        }
+
+        html { 
+          cursor: url('/assets/cursors/sword.png'), auto; 
+        }
+        
+                    a:link {
+              		    color: white;
+              		    background-color: transparent;
+              		    text-decoration: none;
+              		  }
+              
+              		  a:visited {
+              		    color: white;
+              		    background-color: transparent;
+              		    text-decoration: none;
+              		  }
+              
+              		  a:hover {
+              		    color: #858585;
+              		    background-color: transparent;
+              		    text-decoration: underline;
+              		    cursor:crosshair;
+              		  }
+              
+              		  a:active {
+              		    color: #858585;
+              		    background-color: transparent;
+              		    text-decoration: none;
+              		  }
+              		  
+              		  ::selection {
+                      background: darkgray;
+                      color: black;
+                    }
+              		  
+              		  @font-face {
+              		    font-family: 'Pixel';
+              		    src:url(/assets/fonts/Pixel.woff);
+                    }
+                    
+                    @font-face {
+                		  font-family: 'basiic';
+                		  src: url(/assets/fonts/basiic.ttf);
+                    }
+                      
+                    @font-face {
+                      font-family:'speciale';
+                      src: url(/assets/fonts/SpecialElite.ttf);
+                    }
+              	  
+              	    @font-face {
+                		  font-family: 'freepixel';
+                		  src: url(/assets/fonts/FreePixel.ttf);
+                    }
+                 
+              		  @font-face {
+                      font-family: 'gothitch';
+                      src: url(/assets/fonts/itchgothic.ttf);
+                    }
+                     
+                    @font-face {
+                      font-family: Spirit;
+                      src: url(/assets/fonts/Spirit.ttf);
+                    }
+                     
+                    ::-webkit-scrollbar { display: none; }
+                         
+        body {
+          color: black;
+          font-family: 'speciale';
+          background: url(/assets/lacebrdr2.png) repeat-x top, url(/personal/whitecrest.gif) repeat-x bottom, url(/personal/wpblkcrest.gif);
+          font-size: 13px;
+          text-align: left;
+          overflow-y: hidden;
+          overflow-x:hidden;
+          position: relative;
+          height: 100vh;
+          flex-direction: column;
+          margin: 0;
+          display: flex;
+          align-items: center;
+        }
+        
+        .container {
+          width: 100%;
+          margin: 0 auto;
+          padding: 1em;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        
+        .mydiary {
+          flex-direction: column;
+          padding-bottom: 0;
+          text-align: left;
+          align-items: center;
+          overflow:scroll;
+          height:100vh;
+          margin-top:10px;
+          width:820px;
+          margin-bottom:-10px;
+        }
+
+        .entry {
+          margin: 2em;
+          width: 700px;
+          text-align: justify;
+          padding-left: 15px;
+          padding-right: 15px;
+          padding-bottom: 5px;
+          padding-top: 5px;
+          border-style: solid;
+          border: 1px solid black;
+          border-image: url("/assets/lace5.png") 35  round; 
+          background-size: 60%;
+          background: white;
+          border-width:8px;
+          border-radius:20px;
+          border-image-outset: 2px;
+        }
+        
+        .headertext {
+          position: absolute;
+          top: 20px;
+          left: calc(50% - 600px);
+          z-index: 10;
+          font-family: 'gothitch';
+          font-size: 80px;
+          color: #262626;
+          text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+          filter: drop-shadow(5px 5px 0 black) drop-shadow(1px 0 0 gray) drop-shadow(0 1px 0 gray) drop-shadow(-1px 0 0 gray) drop-shadow(0 -1px 0 gray);
+          background: transparent;
+          pointer-events: none;
+        }
+
+        
+        .datetext {
+          background:white;
+          padding:3px;
+          padding-right:3px;
+          padding-top:3px;
+        }
+        
+        .entryouter {
+          display: inline-block; 
+          padding: 0px; 
+          background: url('/assets/mysozai/diagred2.png'); 
+          box-sizing: content-box; 
+          border:1px gray solid;
+          filter: drop-shadow(5px 5px 0 #262626) drop-shadow(1px 0 0 black) drop-shadow(0 1px 0 black) drop-shadow(-1px 0 0 black) drop-shadow(0 -1px 0 black);
+        }
+        
+        @keyframes squiggly-anim {
+            0% {
+              -webkit-filter: url("#squiggly-0");
+                      filter: url("#squiggly-0");
+            }
+            25% {
+              -webkit-filter: url("#squiggly-1");
+                      filter: url("#squiggly-1");
+            }
+            50% {
+              -webkit-filter: url("#squiggly-2");
+                      filter: url("#squiggly-2");
+            }
+            75% {
+              -webkit-filter: url("#squiggly-3");
+                      filter: url("#squiggly-3");
+            }
+            100% {
+              -webkit-filter: url("#squiggly-4");
+                      filter: url("#squiggly-4");
+            }
+        }
+      
+        #text {
+          animation: squiggly-anim 0.5s linear infinite;
+        }
+      
+        .svg-container {
+          width: 0;
+          height: 0;
+          overflow: hidden;
+        }
+          
+    </style>
+</head>
+
+<body class="scroll">
+        <!--start of jiggle script lawl-->
+            <span class="svg-container">
+                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="0" height="0">
+                    <defs>
+                      <filter id="squiggly-0">
+                        <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="0" />
+                        <feDisplacementMap id="displacement" in="SourceGraphic" in2="noise" scale="6" />
+                      </filter>
+                      <filter id="squiggly-1">
+                        <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="1" />
+                        <feDisplacementMap in="SourceGraphic" in2="noise" scale="8" />
+                      </filter>
+                      <filter id="squiggly-2">
+                        <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="2" />
+                        <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" />
+                      </filter>
+                      <filter id="squiggly-3">
+                        <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="3" />
+                        <feDisplacementMap in="SourceGraphic" in2="noise" scale="8" />
+                      </filter>
+                      <filter id="squiggly-4">
+                        <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="4" />
+                        <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" />
+                      </filter>
+                    </defs>
+                  </svg>
+            </span>
+        <!--end of jiggle script-->
+        
+<div class="container" id="wrapper">
+  <!--start of static header text-->
+  <div class="headertext"><span id="text">Diary</span> <img src="/personal/cross2.gif"></div>
+  <!--end of header text-->
+
+    <main class="mydiary" id="mydiary">
+        <!--entry code goes here-->
+          <p><span class="datetext"> <img src="/personal/bullet.png"> entry 04 , 04-08-25 </span></p>
+            <div class="entryouter">
+            <div class="entry">
+              <p>i end up dwelling too much on nostalgia and it ends up eating me from the inside. funny how most people think too much ab the future and im stuck on the past. time is what i dont have </p>
+            </div></div><br>
+            
+          <p><span class="datetext"> <img src="/personal/bullet.png"> entry 03 , 0312-25 </span></p>
+            <div class="entryouter">
+            <div class="entry">
+              
+              <p>i think nowadays people underestimate how much negative media affects us as people. like yeah sure everyone knows negative=bad, but nobody talks about the long term effects as much. i know for me i feel like i have weights on my chest everytime i consume any negative media. all my pessimism is ruining my life and rotting my brain, i joke about this shit all the time but im falling deeper into this complex rabbit hole and feeling myself pull away from things i find genuine joy in all so i can run away from my thoughts and that isnt right. i want to focus on exploring myself and truly finding peace within myself instead of this useless facade i have kept up for who knows how long. i cant push it away any longer, its something i have to come to terms with and accept, and then move on and heal from. im losing myself , but honestly i dont even know who “myself” is ? i dont know what i am or what i truly stand for, i just exist. i am aware i dont need labels but i dont want to be just floating in space either . i have to find a healthy balance, i truly dont feel like i know who i am. i find myself doing actions i know i wont agree with and have stated that i do not agree with them, and it makes me wonder: am i just a product of influence?
+                i have consumed so much media that without any of it at all, i dont know if id be anything actually. i probably don't even <i>need</i> to be anything, i just need something to fill this emptiness. maybe ill find it one day</p>
+              
+            </div></div><br>
+            
+          <p><span class="datetext"> <img src="/personal/bullet.png"> entry 02 , 02-20-25 </span></p>
+            <div class="entryouter">
+            <div class="entry">
+              <p>i have dreams of stuff that happens in articles i have read about. i see everything in black and white. everything to me is either total happiness or total despair and the space between makes me feel hollow. i dont feel happiness its more like, a bittersweet feeling. and if not that then im just upset but not actually upset? im empty</p>
+              
+            </div></div><br>
+            
+          <p><span class="datetext"> <img src="/personal/bullet.png"> entry 01 , 01-10-25 </span></p>
+            <div class="entryouter">
+            <div class="entry">
+              <p>just got back from england, i feel emotional. it isn't because i miss anyone or california, its just because the entire time i was there, i just kept thinking what if i was born here, what if i lived here instead, how different would my life be? would i still feel like an emotional wreck lol? would i even like to live here as i do in this life, or would i also be thinking this entire thought about another place. it's weird. i always think about what could have been </p>
+            </div></div><br>
+        <!--end of entry code-->
+    </main>
+  </div>
+</body>
+</html>

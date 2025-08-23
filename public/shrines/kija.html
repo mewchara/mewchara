@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html>
+  <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+          document.addEventListener('contextmenu', event => event.preventDefault());
+    </script>
+    
+    <title>an eternity with hakuryuu</title>
+
+
+    
+          	<link rel="icon" type="image/x-icon" href="/shrines/assets1/kija3.jpg">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script type="text/javascript">
+(function titleScroller(text) {
+        document.title = text;
+        console.log(text);
+        setTimeout(function () {
+            titleScroller(text.substr(1) + text.substr(0, 1));
+        }, 100);
+    }("an eternity with hakuryuu...<3 "));
+</script>
+
+<style>
+      
+                    body {
+              		  background-image:url('/shrines/assets1/bluebow.png'); /* <- creds to lapin/lovesick*/
+              		  font-size:16px;
+              		  color:black;
+                    min-height: 100vh;
+              		  font-family:'basiic';
+              		  overflow-x:hidden;
+              		  position:relative;
+                    }
+              		
+              		  a:link {
+              		    color: #858585;
+              		    background-color: transparent;
+              		    text-decoration: none;
+              		  }
+              
+              		  a:visited {
+              		    color: #858585;
+              		    background-color: transparent;
+              		    text-decoration: none;
+              		  }
+              
+              		  a:hover {
+              		    color: #858585;
+              		    background-color: transparent;
+              		    text-decoration: underline;
+              		  }
+              
+              		  a:active {
+              		    color: #858585;
+              		    background-color: transparent;
+              		    text-decoration: none;
+              		  }
+              		  
+              		  @font-face {
+              		    font-family: 'Pixel';
+              		    src:url(/assets/fonts/Pixel.woff);
+                    }
+                    
+                     @font-face {
+                		    font-family: 'basiic';
+                		    src: url(/assets/fonts/basiic.ttf);
+                      }
+              	  
+              	    @font-face {
+                		    font-family: 'freepixel';
+                		    src: url(/assets/fonts/FreePixel.ttf);
+                      }
+              	      
+              		  .heading {
+              			  font-family:'Pixel';
+              			  font-size:100px;
+              			  color:#7cadc2;
+              			  filter: drop-shadow(2px 0 0 #316378) drop-shadow(0 2px 0 #316378) drop-shadow(-2px 0 0 #316378) drop-shadow(0 -2px 0 #316378) drop-shadow(0px 1px 2px white) drop-shadow(0px 1px 3px white);
+                      letter-spacing: 0px;
+                      position:absolute;
+                      margin: -200px -50px -100px -80px;
+                      z-index:2;
+                      }
+                 
+              		  @font-face {
+                      font-family: 'corp';
+                      src: url(/assets/fonts/corplogomaru.ttf);
+                     }
+                     
+                    @font-face {
+                      font-family: Spirit;
+                      src: url(/assets/fonts/Spirit.ttf);
+                     }
+                     
+                    ::-webkit-scrollbar {
+                      width: 10px;
+                      }
+
+                    ::-webkit-scrollbar-thumb {
+                     background: #a4cada;
+                     border:1px solid #316378;
+                     border-radius:5px;
+                      }
+        
+                    ::-webkit-scrollbar-track {
+                    background: transparent;
+                    border-radius:5px;
+                    }
+       
+       
+                    html { 
+                        cursor: url('/assets/cursors/wingblue.png'), auto; 
+                      }
+                      
+                    .container {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 1fr;
+                    grid-auto-columns: 1fr;
+                    gap: 0px 0px;
+                    grid-auto-flow: row;
+                    grid-template-areas: "meow";
+                    width: 1000px;
+                    height: 900px;
+                    margin: center;
+                    margin-top: 50px;
+                    border-style: solid;
+                    border-image: url("/shrines/assets1/soft-lace.png") 4 fill round;
+                    border-radius: 10px;
+                    box-shadow: 0px 0px 20px #daecf4;
+                    }
+                    
+                    .body {
+                    display: grid;
+                    grid-template-columns: 1fr 1.6fr 0.4fr;
+                    grid-template-rows: 1fr 1fr 1fr;
+                    gap: 20px 20px;
+                    grid-auto-flow: row;
+                    grid-template-areas:
+                        "main main side-nav"
+                        "main main side-nav"
+                        "main main side-nav";
+                    grid-area: meow;
+                    margin: auto;
+                    padding: 25px;
+                    width: 900px;
+                    height: 800px;
+                    background-color: transparent;
+                    border: 1px solid #000;
+                    border-image: url("/shrines/assets1/brown.png") 7 fill round;
+                    border-image-width:10px;
+                    border-radius: 0px;
+                    }
+                      
+                    .main {
+                    grid-area: main;
+                    background: white;
+                    padding: 30px;
+                    text-align: left;
+                    overflow: auto;
+                    border: 3px ridge #daecf4;
+                    }
+                    
+                    .side-nav {
+                    grid-area: side-nav;
+                    background: url('/shrines/assets1/kijabed.png');
+                    width: 200px;
+                    text-align: center;
+                    border: 1px solid #daecf4;
+                    filter: brightness(120%);
+                    }
+                    
+                    .side-nav2 {
+                    grid-area: side-nav;
+                    background: transparent;
+                    width: 200px;
+                    text-align: center;
+                    
+                    }
+                    
+                    .bg-left {
+                    
+                    background-size: contain;
+                    height: 600px;
+                    width: 600px;
+                    background-repeat: no-repeat;
+                    margin: 0 auto;
+                    display: block;
+                    position: absolute;
+                    top: 300px;
+                    left: 900px;
+                    }
+                    
+                    .kija {
+                    height: 100px;
+                    width: 100px;
+                    border-width: 7px;
+                    border-style: solid;
+                    border-image: url("/shrines/assets1/bluelace.png") 7 fill round;
+                    align-items: center;
+                    margin: -50px -280px -200px -10px;
+                    filter: drop-shadow(0px 0px 7px #add7f0);
+                    }
+                
+                    .kija2 {
+                    height: 100px;
+                    width: 100px;
+                    border-width: 7px;
+                    border-style: solid;
+                    border-image: url("/shrines/assets1/darkbluelace.png") 7 fill round;
+                    align-items: center;
+                    margin: -90px 280px -470px -40px;
+                    filter: drop-shadow(0px 0px 7px #add7f0);
+                    }
+                        
+                    .kijasprite {
+                    height: 100px;
+                    width: 124px;
+                    border-width: 7px;      
+                    align-items: center;
+                    margin: -90px -250px -600px -40px;
+                    filter: drop-shadow(0px 0px 7px #add7f0);
+                    }
+
+                    footer {
+                    text-align: center;
+                    text-shadow: 1px 0px #000, -1px 0px #000, 0px 1px #000, 0px -1px #000, 0 0;
+                    color: #fff;
+                    }
+                    
+                    div {
+                    display: block;
+                    unicode-bidi: isolate;
+                    }
+                    
+                    .h1 {
+                    text-align:left;
+                    font-family: 'spirit';
+                    font-size: 30px;
+                    color: #a4cada;
+                    text-decoration: default;
+                    filter: drop-shadow(1px 0 0 #316378) drop-shadow(0 1px 0 #316378) drop-shadow(-1px 0 0 #316378) drop-shadow(0 -1px 0 #316378) drop-shadow(2px 0px 0 #a4cada);
+                    }
+                 
+                  .footer{ 
+                     margin: 0px 0px -50px 0px;
+                     text-align: center;
+                     color: black;
+                     font-family:'freepixel';
+                     text-shadow: 0px 0px 5px #a4cada;
+                  }
+                  
+                  #mainbutton:hover {
+                    transform: scale(1.2);
+                    cursor: url('/assets/prismatic.png'), default; 
+                    filter: drop-shadow(0px 0px 5px #738a9a);
+                   }
+                   
+                 #kijabutton:hover {
+                    transform: scale(1.2);
+                    cursor: url('/assets/prismatic.png'), default; 
+                    filter: drop-shadow(0px 0px 5px #738a9a);
+                   }
+                   
+                  a:hover {
+                   cursor: url('/assets/prismatic.png'), default; 
+                  }
+                  
+                  .blue {
+                   color: #6a96a8;
+                  }
+                  
+                  .counterouter {
+                   width:123px;
+                   height:73px;
+                   background: url("/shrines/assets1/bluecheck2.gif"), #fff;
+                   align-content:center;
+                   justify-content:center;
+                   border:1px dashed #316378;
+                  }
+                  
+                  .counterinner {
+                   width: 95px;
+                   height:43px;
+                   background: url("/shrines/assets1/slant.gif"), #fff;
+                   margin-left:0px;
+                   align-content:center;
+                   justify-content:center;
+                   padding:3px;
+                   border:1px solid #316378;
+                   font-family:;
+                   
+                   color:black;
+                  }
+                  
+                  table:not(.webring-prev):not(.webring-info):not(.webring-next),th:not(.webring-prev):not(.webring-info):not(.webring-next),td:not(.webring-prev):not(.webring-info):not(.webring-next) { 
+                   border:1px dashed #316378;
+                   padding:5px;
+                   background: url("/shrines/assets1/bluecheck2.gif"), #fff;
+                  }
+                  
+                  td:not(.webring-prev):not(.webring-info):not(.webring-next) {
+                    background:url("/shrines/assets1/slant.gif"), #fff;
+                  }
+                  
+                  ul.bg-left .lil {
+                  }
+                
+                .lil span {
+                    position: fixed;
+                    left: 0px;
+                    right: 0;
+                    width: 100px;
+                    padding: 4px 0;
+                    background-color: #738a9a;
+                    color: #fff;
+                    opacity: 0;
+                    z-index:4;
+                    text-align: center;
+                    font-family: 'basiic';
+                    
+                }
+                .lil:hover span {
+                    opacity: 1;
+                }
+                .tooltiptextbox:hover span:hover {
+                    opacity: 0;
+                }
+                
+                .think span {
+                    position: fixed;
+                    left: 0px;
+                    right: 0;
+                    width: 100px;
+                    padding: 4px 0;
+                    opacity: 0;
+                    z-index:4;   
+                }
+                .think:hover span {
+                    opacity: 1;
+                }
+                .think:hover span:hover {
+                    opacity: 0;
+                }
+                
+                .kijahart {
+                 position:absolute;
+                 margin:0px 0px 0px 1000px;
+                  }
+                  
+                .kijahart2 {
+                 position:absolute;
+                 margin:-120px 0px 0px 60px;
+                  }
+                  
+                  #yume-ring {
+                  margin: 0 auto;
+                  padding: 0px; /* creates some space around the widget */
+                  z-index:5;
+                  margin-right:-10px;
+                }
+                
+                #yume-ring table {
+                  background-color: transparent; /* makes the background pure white */
+                  margin: 0 auto; /* centers the widget */
+                }
+                
+                #yume-ring table tr td {
+                  padding: 2px; /* creates some space between the links and text inside the widget */
+                }
+                
+                #yume-ring .webring-prev {
+                  text-align:right;
+                }
+                
+                #yume-ring .webring-info {
+                   text-align:center;
+                }
+                
+                #yume-ring .webring-next {
+                  text-align:left;
+                }
+                
+                #yume-ring .webring-links {
+                  font-size:13px;
+                }
+
+    </style>
+  </head>
+  
+  
+  <body oncontextmenu="return false;">
+  
+  
+    
+<div class="container">
+  <div class="body">
+      <div class="main"> 
+      
+      <div class="kijahart">
+        <img src="/shrines/assets1/kijahart.gif">
+          <div class="kijahart2">
+            <a href="https://web.archive.org/web/20240712131329/https://fujoshi.nekoweb.org/pages/clique/jodan.html"><img src="/shrines/assets1/yumejoshi.png
+            "></a>
+            <div id='yume-ring'>
+            <script type="text/javascript" src="https://yume-ring.neocities.org/onionring-variables.js"></script>
+            <script type="text/javascript" src="https://yume-ring.neocities.org/confession-widget/onionring-widget-c2.js"></script>
+            </div>
+
+          </div>
+      </div>
+      
+      <p align="right" style="font-family:'spirit';color:darkgray;">. . . is that he is destined to be with me ♡</p>
+          <div class='heading'> Hakuryuu’s Fate </div>
+<center>
+<div class="counterouter">
+  <div class="counterinner">
+      <script>
+          /*
+          Count up from any date script-
+          By JavaScript Kit (www.javascriptkit.com)
+          Over 200+ free scripts here!
+          */
+          
+          var montharray=new Array("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec")
+          
+          function countup(yr,m,d){
+          var today=new Date()
+          var todayy=today.getYear()
+          if (todayy < 1000)
+          todayy+=1900
+          var todaym=today.getMonth()
+          var todayd=today.getDate()
+          var todaystring=montharray[todaym]+" "+todayd+", "+todayy
+          var paststring=montharray[m-1]+" "+d+", "+yr
+          var difference=(Math.round((Date.parse(todaystring)-Date.parse(paststring))/(24*60*60*1000))*1)
+          difference+=" "
+          document.write(" "+difference+" days together")
+          }
+          //enter the count up date using the format year/month/day
+          countup(2017,9,05)
+      </script>
+  </div>
+</div>
+</center>
+<br>
+        <div class='h1'> About</div>
+  			  <p>Kija <span class="blue">キジャ</span> is the current white dragon, one of the four dragon warriors in <i>Akatsuki no Yona</i>. He possesses the blood of the white dragon generations before him, the power is held in his right arm. He was born and raised in a village deeply isolated in the woods, contributed to his headstrong, polite, naïve and sheltered personality. AnY was one of the first animes I ever got into, and seeing Kija for the first time as a nerdy 10 year old girl definitely rewired parts of my brain. Not to be corny, but it was love at first sight, I deeply admire his character and his perserverence throughout various struggles in his life. <br><br>Truly, Kija is the embodiment of a romantic fantasy—loyal, chivalrous, and heartbreakingly sweet. How could anyone <i>not</i> fall hopelessly for him? </p>
+
+<table style="padding:5px;" align="center">
+  <tr style="font-family:'spirit';">
+    <td>Name</td>
+    <td>Birthday</td>
+    <td>Age</td>
+  </tr>
+  <tr>
+    <td>Kija</td>
+    <td>April 6</td>
+    <td>20</td>
+  </tr>
+  <tr style="font-family:'spirit';">
+    <td>Height</td>
+    <td>Hair</td>
+    <td>Eyes</td>
+  </tr>
+  <tr>
+    <td>179cm</td>
+    <td>White</td>
+    <td>Blue</td>
+  </tr>
+</table>
+<br>
+
+<div class='h1'> Why Kija?</div>
+
+          <p><img src="/shrines/assets1/beebooblush.webp" style="height:150px; border:1px solid black;" align="right">The first ever time I watched Akatsuki no Yona, I was crazy overwhelmed by all the hawt guys O_O and then I saw <i>him</i> and suddenly every other character didn't matter. I instantly knew he was my favorite in the series, even though he is not someone I would say is "my type". I am more into cocky 'edgelord-y' characters with some kind of god complex. Kija is the total opposite (lol) and I still fell for him. I would even go so far to say he is PEAK yume material. He’s that perfect mix of elegance, devotion, and just a hint of dramatic flair that makes every interaction feel like it’s straight out of a romance novel (I adore every part of this man). He is the very definition of a noble prince, exuding grace, refinement, and unwavering loyalty. Can't you just imagine his soft, snowy-white hair shimmering under the moonlight as he turns toward you, his blue eyes filled with adoration, and with a gentle yet confident gesture, he draws you into his embrace, his warmth surrounding you like a protective shield, offering both comfort and reassurance in hard times. Kija isn't just a warrior—he’s a protector, a man who would lay down everything for the one he loves. His touch? Tender yet strong, as if he’s holding something more precious than his own life. And the way he gets flustered? Watching him turn pink over the smallest things—like accidentally brushing hands—is a privilege. Admittedly, I am somewhat glad this man has been worshipped all his life (as he should be), because of the adorable innocence aspect of course; so when he actually gets close to people? He’s so easily flustered. Compliment him? He gets red. Hold his hand? He might just malfunction. It’s the kind of reaction that makes you want to tease him just to see how much cuter he can get. I am definetely into this kind of dynamic, just thinking about it makes my heart flutter!</p>
+
+
+          <p><img src="/shrines/assets1/beebooshush.jpg" style="height:150px; border:1px solid black;margin-right:5px;" align="left">Despite his inexperience, even when uncertainty creeps in, Kija refuses to let it show. He carries himself with unwavering resolve, always putting his duty before his fears. No matter the circumstances, he will push himself to the limit to shield those he holds dear. When his loved ones are in danger, his usual composed nature fades, revealing a more intense, almost fearsome side that few get to see. In those moments, he is relentless, fully embracing the power within him if it means ensuring their safety. (I find it quite hot honestly.) But Kija’s journey isn’t just about strength; it’s also about growth. Once bound by the rigid ideals of the dragon warrior’s destiny, he has slowly learned to open his heart to those beyond it, realizing that true bonds go beyond fate itself. Even though his life might have sounded nice, being pampered your whole life, it is not as easy as you might think. The isolation and the pressure of being the next white dragon have impacted him, even though he hides it. His childhood wasn't too great either, and the four long scars on his back can prove that. His father, the previous Hakuryuu, went into a jealous rage and ended up slashing his own son over the idea of his powers being taken from him by a successor. Despite this, Kija has no hesitation in letting others see his scars; instead, he wears them with pride as a testament to the devotion the dragon deities have to serve the Crimson King.</p>
+        <br>
+        <div class='h1'>Fanarts</div><br>
+        
+        
+  			  <table style="padding:5px;" align="center">
+  <tr>          
+    <td style="width: 33.33%; text-align: center;">
+      <a href='https://x.com/tb7atE8nAo57998/status/1893706167597080944'><img style="height:180px; width: 180px; object-fit: cover; border:1px #316378 solid;" src="/shrines/assets1/1.jpeg"></a>
+    </td>
+    <td style="width: 33.33%; text-align: center;">
+      <a href='https://x.com/to_mi4922/status/1873555326685045199'><img style="height:180px; width: 180px; object-fit: cover;border:1px #316378 solid;" src="/shrines/assets1/2.jpeg"></a>
+    </td>
+    <td style="width: 33.33%; text-align: center;">
+      <a href='https://x.com/juya15976333/status/1860662063678530022'><img style="height:180px; width: 180px; object-fit: cover;border:1px #316378 solid;" src="/shrines/assets1/3.jpeg"></a>
+    </td>
+  </tr>
+              <tr>
+                <td style="width: 33.33%; text-align: center;">
+                  <a href='https://x.com/9dou_misa/status/1379086471722770432'><img style="height:180px; width: 180px; object-fit: cover;border:1px #316378 solid;" src="/shrines/assets1/4.jpeg"></a>
+                </td>
+                <td style="width: 33.33%; text-align: center;">
+                  <a href='https://x.com/9dou_misa/status/1643629673392353280'><img style="height:180px; width: 180px; object-fit: cover;border:1px #316378 solid;" src="/shrines/assets1/5.jpeg"></a>
+                </td>
+                <td style="width: 33.33%; text-align: center;">
+                  <a href='https://x.com/9dou_misa/status/1452957230194515971'><img style="height:180px; width: 180px; object-fit: cover;border:1px #316378 solid;" src="/shrines/assets1/6.jpeg"></a>
+                </td>
+              </tr>
+  <tr>
+    <td style="width: 33.33%; text-align: center;">
+      <div class="think"><span class="think1"><img style="height:350px;" src="/shrines/assets1/thinking.png"></span><a href='https://x.com/9dou_misa/status/1689983835621281792'><img style="height:180px; width: 180px; object-fit: cover;border:1px #316378 solid;" src="/shrines/assets1/7.jpeg"></a></div>
+    </td>
+    <td style="width: 33.33%; text-align: center;">
+      <a href='https://x.com/to_mi4922/status/1901584312790839307'><img style="height:180px; width: 180px; object-fit: cover;border:1px #316378 solid;" src="/shrines/assets1/8.jpeg"></a>
+    </td>
+    <td style="width: 33.33%; text-align: center;">
+      <a href='https://x.com/tb7atE8nAo57998/status/1891734910303424551'><img style="height:180px; width: 180px; object-fit: cover;border:1px #316378 solid;" src="/shrines/assets1/9.jpeg"></a>
+    </td>
+  </tr>
+                <tr>
+                <td style="width: 33.33%; text-align: center;">
+                  <a href='https://x.com/to_mi4922/status/1650441890557497344'><img style="height:180px; width: 180px; object-fit: cover;border:1px #316378 solid;" src="/shrines/assets1/10.jpeg"></a>
+                </td>
+                <td style="width: 33.33%; text-align: center;">
+                  <a href='https://x.com/sukk_56/status/1715710690911301731'><img style="height:180px; width: 180px; object-fit: cover;border:1px #316378 solid;" src="/shrines/assets1/11.jpeg"></a>
+                </td>
+                <td style="width: 33.33%; text-align: center;">
+                  <a href='https://x.com/to_mi4922/status/1511623776718696450'><img style="height:180px; width: 180px; object-fit: cover;border:1px #316378 solid;" src="/shrines/assets1/12.jpeg"></a>
+                </td>
+              </tr>
+</table>
+<br>
+<div class='h1'>Official Arts</div><br>        
+       <table style="padding:5px;" align="center">
+  <tr>          
+    <td style="width: 33.33%; text-align: center;">
+      <img style="height:180px; width: 180px; object-fit: cover; border:1px #316378 solid;" src="/shrines/assets1/01.jpeg">
+    </td>
+    <td style="width: 33.33%; text-align: center;">
+      <img style="height:180px; width: 180px; object-fit: cover;border:1px #316378 solid;" src="/shrines/assets1/02.jpeg">
+    </td>
+    <td style="width: 33.33%; text-align: center;">
+      <img style="height:180px; width: 180px; object-fit: cover;border:1px #316378 solid;" src="/shrines/assets1/03.jpeg">
+    </td>
+  </tr>
+              <tr>
+                <td style="width: 33.33%; text-align: center;">
+                  <img style="height:180px; width: 180px; object-fit: cover;border:1px #316378 solid;" src="/shrines/assets1/04.jpeg">
+                </td>
+                <td style="width: 33.33%; text-align: center;">
+                  <img style="height:180px; width: 180px; object-fit: cover;border:1px #316378 solid;" src="/shrines/assets1/05.jpeg">
+                </td>
+                <td style="width: 33.33%; text-align: center;">
+                  <img style="height:180px; width: 180px; object-fit: cover;border:1px #316378 solid;" src="/shrines/assets1/06.jpeg">
+                </td>
+              </tr>
+  <tr>
+    <td style="width: 33.33%; text-align: center;">
+      <div class="think"><span class="think1"><img style="height:350px;" src="/shrines/assets1/thinking.png"></span><img style="height:180px; width: 180px; object-fit: cover;border:1px #316378 solid;" src="/shrines/assets1/07.jpeg"></div>
+    </td>
+    <td style="width: 33.33%; text-align: center;">
+      <img style="height:180px; width: 180px; object-fit: cover;border:1px #316378 solid;" src="/shrines/assets1/08.jpeg">
+    </td>
+    <td style="width: 33.33%; text-align: center;">
+      <img style="height:180px; width: 180px; object-fit: cover;border:1px #316378 solid;" src="/shrines/assets1/09.jpeg">
+    </td>
+  </tr>
+</table>
+<br>   
+      </div>
+      <div class="side-nav"> 
+        </div> <div class="side-nav2"><div id="kija"><img class="kija" src="/shrines/assets1/kija3.jpg"></div>
+        <img class="kija2" src="/shrines/assets1/kija.png">
+        
+      
+          
+         
+      </div>
+  
+  </div>
+   
+   
+   <div class="footer">
+   <marquee scrollamount="15" behavior="alternate">
+   <p>© MEWCHARA 2024 & 4EVA</p>
+  
+  </marquee>
+   </div> 
+</div>
+
+ 
+    <ul class="bg-left">
+      <li class="lil">
+        <span>@9dou_misa</span>
+        <img style="height: 440px;width: inherit;margin: 0 auto;display: block;position: absolute;" src="/shrines/assets1/download.png">
+      </li>
+    </ul>
+
+        <script>
+          $('.lil').mousemove(function (e) {
+              $('span', this).css({
+                  left: e.pageX - 100,   // Keep the horizontal position the same
+                  top: e.clientY + 10     // Use e.clientY for vertical positioning relative to the viewport
+              });
+          });
+        </script>
+        
+                <script>
+          $('.think').mousemove(function (e) {
+              $('span', this).css({
+                  left: e.pageX - 100,   // Keep the horizontal position the same
+                  top: e.clientY + 10     // Use e.clientY for vertical positioning relative to the viewport
+              });
+          });
+        </script>
+    
+
+
+
+  </body>
+</html>

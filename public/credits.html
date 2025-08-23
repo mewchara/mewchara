@@ -1,0 +1,267 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/personal/crown.gif">
+    <title>forgotten accolades</title>
+
+  <script>
+  function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+var str = 'forgotten-accolades';
+document.title = '';
+async function typewriteTitle() {
+  for (let i = 0; i < str.length; i++) {
+    document.title += str.charAt(i);
+    console.log(document.title); //debug only
+    await sleep(200);
+  }
+}
+typewriteTitle();
+</script>
+  <style>
+
+.bouncyyy { font-size:4em; z-index: 99; animation: bounce 2s infinite; animation-timing-function: cubic-bezier(0.25, 0.85, 0.4, 1) width:auto; ;}
+.letterone { animation-delay:0s; display:inline-block;}
+.lettertwo { animation-delay:0.2s; display:inline-block;}
+.letterthree { animation-delay:0.4s; display:inline-block; }
+.letterfour { animation-delay:0.6s; display:inline-block;}
+.letterfive { animation-delay:0.8s; display:inline-block;}
+.lettersix { animation-delay:1s; display:inline-block;}
+.letterseven { animation-delay:1.2s; display:inline-block;}
+.lettereight { animation-delay:1.4s; display:inline-block;}
+
+@keyframes bounce { 0% { transform: scale(1,1) translateY(0); } 10% { transform: scale(1.1,.9) translateY(0); } 30% { transform: scale(.9,1.1) translateY(-30px); } 50% { transform: scale(1.05,.95) translateY(0); } 60% { transform: scale(1,1) translateY(-4px); } 100% { transform: scale(1,1) translateY(0); } }
+
+
+                      html { 
+                        cursor: url('/assets/whitesparkly.png'), auto; 
+                      }
+                      
+                      @font-face {
+                		    font-family: 'Pixel';
+                		    src: url(/assets/fonts/Pixel.woff);
+                      }
+                      
+                      @font-face {
+                		    font-family: 'basiic';
+                		    src: url(/assets/fonts/basiic.ttf);
+                      }
+                      
+                      @font-face {
+                		    font-family: 'adorable';
+                		    src: url(assets/fonts/AdorableDoll.ttf);
+                      }
+                      
+                        @font-face {
+                		    font-family: 'rom';
+                		    src: url(assets/fonts/RomanceA.ttf);
+                       }
+                	      
+                	     @font-face {
+                		    font-family: 'kings';
+                		    src: url(/assets/fonts/kings.otf);
+                       }
+                   
+                       @font-face {
+                        font-family: FreePixel;
+                        src: url(/assets/fonts/FreePixel.ttf);
+                       }
+                       
+                       @font-face {
+                        font-family: Spirit;
+                        src: url(/assets/fonts/Spirit.ttf);
+                       }
+                       
+                       @font-face {
+                        font-family: rainyhearts;
+                        src: url(/assets/fonts/rainyhearts.ttf);
+                       }
+                       
+                       @font-face {
+                        font-family: angelwish;
+                        src: url(/assets/fonts/angelwish.ttf);
+                       }
+                       
+                       @font-face {
+                        font-family: choco;
+                        src: url(assets/fonts/Chocolatier.ttf);
+                       }
+                       
+                       @font-face {
+                        font-family: pop;
+                        src: url(assets/fonts/PopBoutique.ttf);
+                       }
+   ::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius:10px;
+  border:1px black solid;  
+}
+
+::-webkit-scrollbar-track {
+  background-color: white;
+}
+
+  body {
+    background: url(/personal/whitelace4.gif) top repeat-x, url(/personal/whitelace4.gif) bottom repeat-x, url(/personal/wpblk.gif); 
+    overflow: hidden;
+    font-family: garamond;
+    text-shadow: 0px 0px 3px #9e9e9e, 0px 0px 5px #9e9e9e;
+    font-size:16px;
+    color:black;
+    position:relative;
+  }
+  
+  .container {
+    width: 550px;
+    padding: 0px;
+}
+
+.main {
+    background: url(personal/blackstripe.png);
+    border: 1px solid white;
+    max-width: 500px;
+    max-height:585px;
+    color: black;
+  }
+  
+
+.main {
+    height: 100%;
+    width: 100%;
+  }
+  
+.main2 {
+    background: url(assets/linesblk.png);
+    border: 1px solid white;
+    max-width: 470px;
+    max-height:560px;
+    color: black;
+    margin:auto;
+    margin-top:5px;
+    padding:5px;
+  }
+  
+  .main2 {
+    height: 100%;
+    width: 100%;
+  }
+
+.main3 {
+      background-image: radial-gradient(#f7f7f7,white);
+    border: 1px solid black;
+    max-width: 450px;
+    max-height:540px;
+    color: black;
+    margin:auto;
+    margin-top:5px;
+    padding:5px;
+    overflow-y:scroll;
+  }
+  
+  .main3 {
+    height: 100%;
+    width: 100%;
+  }
+
+.header {
+  font-family:'adorable';
+  filter: drop-shadow(2px 0 0 white) drop-shadow(0 2px 0 white) drop-shadow(-2px 0 0 white) drop-shadow(0 -2px 0 white) drop-shadow(0px 1px 1px black) drop-shadow(0px 1px 1px black);
+  color:black;
+  text-shadow:none;
+  font-size:10px
+  position:absolute;
+}
+
+.header2 {
+  margin: -40px 0px 0px 40px;
+  position:absolute;
+}
+
+#freya {
+  position:absolute;
+  width:450px;
+  filter:saturate(20%) ;
+  margin: 10px 0px 0px 200px;
+}
+   
+   a {
+    color:black;
+    font-weight: none;
+    text-decoration:none;
+    cursor: crosshair;
+   }
+   
+    a:hover {
+    color:#4d4d4d;
+    font-weight: bold;
+    text-decoration:none;
+    cursor: crosshair;
+   }
+   
+   .actual{
+      line-height: 1;
+        word-spacing: 1px;
+   }
+   
+   .boldclass{
+     color:#4d4d4d; font-weight:bold;font-size:18px;
+   }
+  </style>
+  
+  </head>
+  
+   
+  <body>
+  
+<div class="container">
+
+<div class="main">
+<div class="main2">
+<div class="main3">
+<center>
+<img id="freya" src="assets/freya.png">
+<div class="header2"><span class="header"><p class="bouncyyy letterone">C</p><p class="bouncyyy lettertwo">r</p><p class="bouncyyy letterthree">e</p><p class="bouncyyy letterfour">d</p><p class="bouncyyy letterfive">i</p><p class="bouncyyy lettersix">t</p><p class="bouncyyy letterseven">s</p></span></div>
+
+</center>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="actual"><p>
+<img align="left" src="/assets/kurosticker.webp">
+<p>: here are all the resources i have used in the making of my site, huge thank you. please keep in mind this is based off memory, so if you see something i have not added yet, <i>please</i> let me know in my cbox <img src="personal/bullet.png"></p>
+<p><img src="personal/crown2.gif"> <span class="boldclass">: Fonts ?</span> <br>
+ <img src="personal/bullet.png"> <a href="https://www.asterism-m.com/">: asterism</a>, <a href="https://fonts.google.com/">google fonts</a>, <a href="https://cinni.net/?z=/font">cinni.net</a>, <a href="https://www.dafont.com/">dafont</a>, <a href="http://whimsical.heartette.net/">whimsical</a></p>
+ <p><img src="personal/crown2.gif"> <span class="boldclass">: Sozai ?</span> <br>
+ <img src="personal/bullet.png"> <a href="https://foollovers.com/mat/index.html">: fool lovers</a>, <a href="https://www.asterism-m.com/">asterism</a>, <a href="https://across.xxxxxxxx.jp/index.htm">across+</a>, <a href="https://dice.nengu.jp/">out of place artifacts</a>, <a href="http://sozaioukoku.fc2web.com/">sozaioukoku</a>, <a href="https://www.fancyparts.com/">fancyparts</a>, <a href="https://jansgraphics.com/">jan's graphics</a>, <a href="https://graphic.neocities.org/directory">bonnibel's graphics</a>, <a href="http://whimsical.heartette.net/">whimsical</a> & special mention to <a href="https://lovesick.cafe/"><b>lapin/lovesick</b></a> for the black bow background on <a href="/mainpage"><b>/mainpage</b></a></p>
+ <p><img src="personal/crown2.gif"> <span class="boldclass">: Arts ?</span> <br>
+ <img src="personal/bullet.png">: mine ദ്ദി ˉ͈̀꒳ˉ͈́ ) (all uploaded arts on <a href="https://toyhou.se/mewchara">my toyhouse</a>), freya art on this page from <b><a href="https://chobits.fandom.com/wiki/Your_Eyes_Only_(artbook)">Your Eyes Only</a></b> artbook by CLAMP.</p>
+  <p><img src="personal/crown2.gif"> <span class="boldclass">: Code ?</span> <br>
+ <img src="personal/bullet.png">: i am self taught using sites like <a href="https://www.w3schools.com/">w3schools</a> and <a href="https://developer.mozilla.org/en-US/">mdn web docs</a>, sparkle mouse effect on <a href="/index"><b>/index</b></a> from <a href="https://mf2fm.com/rv/dhtmltinkerbell.php">rv's free javascript/dhtml effects</a>, keep coding! practice makes perfect (๑•̀ ᴗ•́)૭</p>
+</p>
+<br>
+<p align="center"><a href="/mainpage">back</a></p>
+</div>
+
+</div> 
+</div>
+</div>
+
+
+
+
+</div>
+
+
+  
+
+</body></html>

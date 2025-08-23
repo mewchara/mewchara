@@ -1,0 +1,565 @@
+<html>
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+                        <title>do you wish to be cured?</title>    	
+                        <script type="text/javascript">
+                        (function titleScroller(text) {
+                                document.title = text;
+                                console.log(text);
+                                setTimeout(function () {
+                                    titleScroller(text.substr(1) + text.substr(0, 1));
+                                }, 100);
+                            }("c u r e "));
+                        </script>
+        
+        <link rel="icon" type="image/x-icon" href="/personal/crown.gif">
+        
+    <style>
+    html { 
+                        cursor: url('/assets/whitesparkly.png'), auto; 
+                      }
+                        
+                      body {
+                      color:black; 
+                      background-color:#DEECE5;
+                      font-family: 'garamond';
+                      background:url(/personal/bglace2.png) bottom repeat-x,url(/personal/bglace.png) top repeat-x, url(/personal/blackstripe2.png);
+                      font-size: 16px;
+                      text-shadow: 0px 0px 3px black, 0px 0px 5px black;
+                      text-align:left;
+                      overflow:hidden;
+                      position:relative;
+                     
+                      }
+                      
+                      ::-webkit-scrollbar { display: none; }
+                  
+                		  @font-face {
+                		    font-family: 'Pixel';
+                		    src: url(/assets/fonts/Pixel.woff);
+                      }
+                      
+                      @font-face {
+                		    font-family: 'basiic';
+                		    src: url(/assets/fonts/basiic.ttf);
+                      }
+                      
+                      @font-face {
+                		    font-family: 'infer';
+                		    src: url(/assets/fonts/Infernalda.ttf);
+                      }
+                      
+                      @font-face {
+                		    font-family: 'adorable';
+                		    src: url(/assets/fonts/AdorableDoll.ttf);
+                      }
+                      
+                      @font-face {
+                		    font-family: 'rom';
+                		    src: url(/assets/fonts/RomanceA.ttf);
+                      }
+                	      
+                	   @font-face {
+                		    font-family: 'kings';
+                		    src: url(/assets/fonts/kings.otf);
+                      }
+                   
+                      @font-face {
+                        font-family: FreePixel;
+                        src: url(/assets/fonts/FreePixel.ttf);
+                       }
+                       
+                       @font-face {
+                        font-family: Spirit;
+                        src: url(/assets/fonts/Spirit.ttf);
+                       }
+                       
+                       @font-face {
+                        font-family: rainyhearts;
+                        src: url(/assets/fonts/rainyhearts.ttf);
+                       }
+                       
+                       @font-face {
+                        font-family: angelwish;
+                        src: url(/assets/fonts/angelwish.ttf);
+                       }
+                       
+                       @font-face {
+                        font-family: choco;
+                        src: url(assets/fonts/Chocolatier.ttf);
+                       }
+                       
+                       @font-face {
+                        font-family: pop;
+                        src: url(assets/fonts/PopBoutique.ttf);
+                       }
+                       
+                      ::-webkit-scrollbar {
+                      width:3px;
+                      height: 3px;
+                      background: black;
+                      
+                      }
+                      ::-webkit-scrollbar-track {
+                      border: 
+                      border-radius: 0px;
+                      }
+                      ::-webkit-scrollbar-thumb {
+                      background: #5c5c5c;  
+                      border-radius: 0px;
+                      border: 
+                      }
+                      
+
+                      
+                      ::selection {
+                          color: white;
+                          background: gray;
+                        }
+                        
+                    .container {
+                     width:850px;
+                     height:360px;
+                     background:url(/assets/linesblk.png);
+                     margin: auto;
+                     margin-top:100px;
+                     display:flex;
+                     position:relative;
+                     border: 1px solid white;
+                     padding:15px;
+                    }
+                    
+                    .container1 {
+                     background:url(/personal/wpblkcrest.gif);
+                     border-left:1px solid white;
+                     border-top:1px solid white;
+                     border-bottom:1px solid white;
+                     width:90%;
+                     padding:13px;
+                     margin:auto;
+                     height:320px;
+                     position:relative;
+                    }
+                    
+                    .container2 {
+                     background:url(/personal/wpblk.gif);
+                     border:1px solid white;
+                     width:10%;
+                     padding:13px;
+                     margin:auto;
+                     height:320px;
+                     position:relative;
+                    }
+                    
+                    .inner1 {
+                     background:url(/assets/blackbrdr2.gif) repeat-x, url(/assets/linesgray.png);
+                     width:96.5%;
+                     padding:13px;
+                     margin:auto;
+                     height:295px;
+                   overflow-y:hidden;
+                   overflow-x:hidden;
+                    }
+                    
+                    .inner2 {
+                     background:url(/personal/blacklace4.gif) top repeat-x,url(/personal/blacklace4.gif) bottom repeat-x, url(/assets/linesgray.png);
+                     width:70%;
+                     padding:13px;
+                     margin:auto;
+                     height:295px;
+                     overflow:hidden;
+                     align-content:center; 
+                    }
+                    
+                    #header {
+                    font-family:georgia;
+                    position:absolute;
+                    color:white;
+                    top: -60px;
+                    text-align: left;
+                    left: -20px;
+                    width:auto;
+                    }
+                    
+                    h1 {
+                    display: inline;
+                    font-family: 'kings';
+                    font-size: 70px;
+                    letter-spacing: 1px;
+                    color:black;
+                    text-shadow:none;
+                    filter: drop-shadow(2px 0 0 white) drop-shadow(0 2px 0 white) drop-shadow(-2px 0 0 white) drop-shadow(0 -2px 0 white) drop-shadow(0px 1px 1px gray) drop-shadow(0px -1px 3px gray);
+                    z-index:6;
+                    }
+                    
+                    .menu {
+                     position:absolute;
+                     margin-left:-15px;
+                     margin-top:-130px;
+                    }
+                    
+                    #menutext {
+                     padding:4px; 
+                     width: auto;
+                     height: auto;
+                     max-width: 100%;
+                    }
+                    
+                    #menutext:hover {
+                     padding:10px;
+                     cursor:crosshair;
+                     filter: drop-shadow(0px 0px 10px black);
+                     margin-left:-15px;
+                    }
+                    
+                    a:hover{
+                     cursor:crosshair; 
+                    }
+                    
+                    .inner1text {
+                      position:absolute;
+                     width:460px;
+                     height:270px;
+                     margin:auto;
+                     border: 1px solid black;
+                     margin:-10px 0px 0px 230px;
+                     background: url(/personal/blackstripe2.png);
+                     align-content:center;
+                     display: flex;
+                    }
+                    
+                    .inner1text2 {
+                    background:url(/assets/linesblk.png);
+                    width:440px;
+                    height:250px;
+                    margin:auto;
+                    align-content:center;
+                    justify-content:center;
+                    display: flex;
+                    overflow-y:scroll;
+                    }
+                    
+                    .inner1text3 {
+                    background:white;
+                    width:405px;
+                    height: 215px;
+                    margin:auto;
+                    padding:5px;
+                    border:1px black solid;
+                    text-shadow: 0px 0px 3px lightgray;
+                    text-align:left;
+                    overflow-y:auto;
+                    }
+                    
+                    
+                    
+                    #kurodoll {
+                    position:absolute;
+                    left:820px;
+                    /*transform: scaleX(-1);*/
+                    z-index:2;
+                    filter: brightness(100%);
+                    }
+                    
+                    .icon {
+                      background-color: radial-gradient(lightgray,transparent);
+                    border-width: 7px;
+                    border-style: solid;
+                    border-image: url("/assets/blklace3.png") 7 fill round;
+                    filter: drop-shadow(0px 0px 3px #d4d4d4);
+                    z-index:0;
+                    position:absolute;
+                    margin:7px 0px 0px -340px;
+                    }
+                    
+                    .nametext {
+                    position:absolute;
+                    font-family:'adorable';
+                    font-size:30px;
+                    transform:rotate(-10deg);
+                    color:white;
+                    text-shadow:none;
+                    filter: drop-shadow(2px 0 0 black) drop-shadow(0 2px 0 black) drop-shadow(-2px 0 0 black) drop-shadow(0 -2px 0 black) drop-shadow(0px 1px 1px gray) drop-shadow(0px -1px 3px gray);
+                    bottom:23px;
+                      }
+                      
+                    .nametext h2{
+                      transform: translateZ(0);
+                      animation: pop 0.3s ease-in-out alternate infinite;
+                       cursor: crosshair;
+                       font-weight:none;
+                    }
+                    
+                    @keyframes pop{
+                        to{
+                            transform: scale(1.02) translateZ(0);
+                        }
+                    }
+                    
+                      .imood {
+                        position:absolute;
+                        background:transparent;
+                        margin:207px 0px 0px 120px;
+                        height:20px;
+                        padding:0;
+                        line-height:.5;
+                        align-content:center;
+                        justify-content:center;
+                        z-index:3;
+                        }
+                    
+                  
+                    .text1{
+                      font-family:'kings';
+                      font-weight:bold;
+                      font-size:20px;
+                      color:white;
+                      filter: drop-shadow(1px 0 0 black) drop-shadow(0 1px 0 black) drop-shadow(-1px 0 0 black) drop-shadow(0 -1px 0 black) ;
+                      text-shadow:none;
+                    }
+                    
+                    .blinkies {
+                     width:150px;
+                     height:300px;
+                     position:absolute;
+                     margin:-50px 0px 0px -250px;
+                     overflow-y:scroll;
+                     overflow-x:hidden;
+                     filter:saturate(100%);
+                    }
+                    
+                    .blinkies:hover {
+                     filter:saturate(100%);
+                     cursor:crosshair;
+                    }
+                    
+                    .spacing{
+                      letter-spacing:1;
+                      }
+                      
+                      .badges {
+                        position:absolute;
+                        width:170px;
+                        bottom:10px;
+                        z-index:3;
+                        right:500px;
+                        filter:saturate(100%);
+                      }
+                      
+                      .buttons{
+                        width:400px;
+                        position:absolute;
+                        margin:330px 0px 0px 410px;
+                        }
+                        
+                      .hidey:hover + .hidey2 {
+                        display: inline;
+                        text-shadow: 0px 0px 1px #9e9e9e, 0px 0px 3px #9e9e9e;
+                      }
+                            
+                        .hidey2 {
+                          display: none;
+                        }
+                        
+                         a:hover {
+                          color:#4d4d4d;
+                          font-weight: bold;
+                          text-decoration:none;
+                          cursor: crosshair;
+                          text-shadow: 0px 0px 1px #9e9e9e, 0px 0px 3px #9e9e9e;
+                         }
+                         
+                         a {
+                           text-decoration:none;
+                           color:#4d4d4d;
+                           font-weight:default;
+                         }
+                         
+                        .spacing2{
+                      letter-spacing:1.3;
+                      color:#4d4d4d;
+                      font-weight: bold;
+                      text-decoration:none;
+                      cursor: crosshair;
+                      }
+                      
+                      .spacing2:hover{
+                      letter-spacing:1.6;
+                      color:gray;
+                      font-size:18px;
+                      font-weight: bold;
+                      text-decoration:none;
+                      cursor: crosshair;
+                      }
+                      
+    </style>
+    
+</head>
+
+<body>
+      <center>
+        <div class="container">
+          <div class="container1">
+            <div class="inner1">
+                    <div id="header"><h1>The Webmistress</h1></div>
+                    <img id="kurodoll" src="/personal/kuronew.webp">
+                    <br>
+                    
+                    <img class="icon" src="/personal/icon.gif" style="" align="left">
+                    <div class="nametext"><h2>Mimi</h2></div>
+                    <div class="imood"><p style="font-size:16px;font-family:basiic;text-shadow:0px 0px 3px gray;">feelin: <a href="https://www.imood.com/users/mewchara"><img src="https://moods.imood.com/display/uname-mewchara/fg-000000/bg-ffffff/imood.gif" alt="The current mood of mewchara at www.imood.com" border="1"></a></p></div>
+                   
+                   <div class="badges">
+                   <img src="/personal/doll.gif"> <img src="/personal/goth.gif"> <img src="/personal/nurse.gif"> <img src="/personal/vamp.gif"> <img src="/personal/plague.gif">
+                   </div>
+                   
+                   <div class="buttons">
+                   <img src="/personal/madewithlove.png"> <img src="/personal/parental.png"> <img src="/personal/noai.jpg"> <img src="/personal/neo2.png"> 
+                   </div>
+                   
+                    <br>
+                    <div class="inner1text">
+                      <div class="inner1text2">
+                        <div class="inner1text3">
+                          <p style="margin: 0px 0px 0px 0px;float: left;text-shadow: 0px 0px 1px #9e9e9e, 0px 0px 3px #9e9e9e;"><img src="/personal/key2.gif" align="left">hai ദ്ദി •⩊• ) my name is mimi, i am an 18 year old med student who likes to draw and code in her free time. i am a massive collector of literally <span class="spacing"><i>everything</i></span> and my favorite way to pass time is by watching movies. i am also into creepy horror type stuff and lots and lots of video games.<br> <br> people describe me as rather blunt, introverted and reclusive, and my social battery dies often so i may be distant a lot of the time lolol
+                          <br>
+                          <br>
+                             <img src="/personal/key2.gif" align="left"> i am not fond of many social media platforms so this is where to find me<br><img src="/personal/bullet.png"> <span class="hidey"><span class="spacing2"> email</span></span> <span class="hidey2">mewchara@proton.me</span><br>
+                             <img src="/personal/bullet.png"> <span class="hidey"><span class="spacing2"> discord</span></span> <span class="hidey2"> @sw_tuna</span><br>
+                             <img src="/personal/bullet.png"> <span class="hidey"><span class="spacing2"><a href="https://juice-bar.net/memberlist.php?mode=viewprofile&u=382">juice-bar bbs</a></span></span> <span class="hidey2"></span>
+                             <img src="/personal/bullet.png"> <span class="hidey"><span class="spacing2"><a href="https://toyhou.se/mewchara">toyhouse</a></span></span> <span class="hidey2"></span></p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <br>
+        <div class="blinkies">
+            
+            <img src="/personal/blink/black10.gif" alt="black10">
+            <img src="/personal/blink/black11.gif" alt="black11">
+            <img src="/personal/blink/black12.gif" alt="black12">
+            <img src="/personal/blink/black13.gif" alt="black13">
+            <img src="/personal/blink/black14.gif" alt="black14">
+            <img src="/personal/blink/black15.gif" alt="black15">
+            <img src="/personal/blink/black17.gif" alt="black17">
+            
+            <img src="/personal/blink/black2.gif" alt="black2">
+            <img src="/personal/blink/black20.gif" alt="black20">
+            <img src="/personal/blink/black21.gif" alt="black21">
+            <img src="/personal/blink/black22.gif" alt="black22">
+            <img src="/personal/blink/black24.gif" alt="black24">
+            <img src="/personal/blink/black30.gif" alt="black30">
+            
+            <img src="/personal/blink/black27.gif" alt="black27">
+            <img src="/personal/blink/black3.gif" alt="black3">
+            <img src="/personal/blink/black19.gif" alt="black19">
+            <img src="/personal/blink/black1.gif" alt="black1">
+            <img src="/personal/blink/black25.gif" alt="black25">
+            
+            <img src="/personal/blink/black31.gif" alt="black31">
+            <img src="/personal/blink/black32.gif" alt="black32">
+            <img src="/personal/blink/black4.gif" alt="black4">
+            <img src="/personal/blink/black41.gif" alt="black41">
+            <img src="/personal/blink/black5.gif" alt="black5">
+            <img src="/personal/blink/black6.gif" alt="black6">
+            <img src="/personal/blink/black61.gif" alt="black61">
+            <img src="/personal/blink/black62.gif" alt="black62">
+            <img src="/personal/blink/black63.gif" alt="black63">
+            <img src="/personal/blink/black7.gif" alt="black7">
+            <img src="/personal/blink/black8.gif" alt="black8">
+            <img src="/personal/blink/black9.gif" alt="black9">
+            <img src="/personal/blink/w1.gif" alt="w1">
+            <img src="/personal/blink/w10.gif" alt="w10">
+            <img src="/personal/blink/w11.gif" alt="w11">
+            <img src="/personal/blink/w13.gif" alt="w13">
+            <img src="/personal/blink/w14.gif" alt="w14">
+            <img src="/personal/blink/w15.gif" alt="w15">
+            <img src="/personal/blink/w16.gif" alt="w16">
+            <img src="/personal/blink/w2.gif" alt="w2">
+            <img src="/personal/blink/w20.gif" alt="w20">
+            <img src="/personal/blink/w3.gif" alt="w3">
+            <img src="/personal/blink/w4.gif" alt="w4">
+            <img src="/personal/blink/w5.gif" alt="w5">
+            <img src="/personal/blink/w6.gif" alt="w6">
+            <img src="/personal/blink/w7.gif" alt="w7">
+            <img src="/personal/blink/w8.gif" alt="w8">
+            <img src="/personal/blink/w9.gif" alt="w9">
+            <img src="/personal/blink/pink0.gif" alt="pink0">
+            <img src="/personal/blink/pink1.gif" alt="pink1">
+            <img src="/personal/blink/pink13.gif" alt="pink13">
+            <img src="/personal/blink/pink14.gif" alt="pink14">
+            <img src="/personal/blink/pink15.gif" alt="pink15">
+            <img src="/personal/blink/pink16.gif" alt="pink16">
+            <img src="/personal/blink/pink17.gif" alt="pink17">
+            <img src="/personal/blink/pink18.gif" alt="pink18">
+            <img src="/personal/blink/pink19.gif" alt="pink19">
+            <img src="/personal/blink/pink2.gif" alt="pink2">
+            <img src="/personal/blink/pink20.gif" alt="pink20">
+            <img src="/personal/blink/pink3.gif" alt="pink3">
+            <img src="/personal/blink/pink4.gif" alt="pink4">
+            <img src="/personal/blink/pink5.gif" alt="pink5">
+            <img src="/personal/blink/pink6.gif" alt="pink6">
+            <img src="/personal/blink/pink7.gif" alt="pink7">
+            <img src="/personal/blink/pink8.gif" alt="pink8">
+            <img src="/personal/blink/pink9.gif" alt="pink9">
+            <img src="/personal/blink/purple1.gif" alt="purple1">
+            <img src="/personal/blink/purple2.gif" alt="purple2">
+            <img src="/personal/blink/purple3.gif" alt="purple3">
+            <img src="/personal/blink/purple4.gif" alt="purple4">
+            <img src="/personal/blink/red1.gif" alt="red1">
+            <img src="/personal/blink/red2.gif" alt="red2">
+            <img src="/personal/blink/red3.gif" alt="red3">
+            <img src="/personal/blink/red4.gif" alt="red4">
+            <img src="/personal/blink/red5.gif" alt="red5">
+            <img src="/personal/blink/red6.gif" alt="red6">
+            <img src="/personal/blink/red7.gif" alt="red7">
+            <img src="/personal/blink/red8.gif" alt="red8">
+            <img src="/personal/blink/red9.webp" alt="red9">
+            <img src="/personal/blink/red999.gif" alt="red999">
+            <img src="/personal/blink/tv12.gif" alt="tv12">
+            <img src="/personal/blink/blue0.gif" alt="blue0">
+            <img src="/personal/blink/blue1.gif" alt="blue1">
+            <img src="/personal/blink/blue11.gif" alt="blue11">
+            <img src="/personal/blink/blue12.gif" alt="blue12">
+            <img src="/personal/blink/blue15.gif" alt="blue15">
+            <img src="/personal/blink/blue2.gif" alt="blue2">
+            <img src="/personal/blink/blue3.gif" alt="blue3">
+            <img src="/personal/blink/blue5.gif" alt="blue5">
+            <img src="/personal/blink/blue6.gif" alt="blue6">
+            <img src="/personal/blink/blue7.gif" alt="blue7">
+            <img src="/personal/blink/blue8.gif" alt="blue8">
+            <img src="/personal/blink/blue9.gif" alt="blue9">
+            <img src="/personal/blink/blue99.gif" alt="blue99">
+            <img src="/personal/blink/bluez.gif" alt="bluez">
+            <img src="/personal/blink/zzz.gif" alt="zzz">
+            <img src="/personal/blink/gray1.gif" alt="gray1">
+            <img src="/personal/blink/gray4.gif" alt="gray4">
+         </div>
+
+
+            </div>
+          </div>
+          <div class="container2">
+            <div class="inner2">
+            <br>
+            
+                <div class="menu">
+                <a href='/webmistress'><img id=menutext src='/personal/about.gif'></a><br>
+                <a href='/webmistress/love'><img id=menutext src='/personal/love.gif'></a><br>
+                <a href='/webmistress/diary'><img id=menutext src='/personal/diary.gif'></a><br>
+                <a href='/webmistress/gallery'><img id=menutext src='/personal/gallery.gif'></a><br>
+                <a href='/webmistress/music'><img id=menutext src='/personal/music.gif'></a><br>
+                <a href='/webmistress/link'><img id=menutext src='/personal/link.gif'></a><br>
+                <a href='/mainpage'><img id=menutext src='/personal/back.gif'></a>
+                </div>
+            </div>
+          </div>
+        </div>
+
+      </center>
+</body>
+
+</html>

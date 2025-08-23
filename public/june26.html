@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4 the bday boy </title>
+    <link href="/cured.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="icon" type="image/x-icon" href="/personal/crown.gif" />
+
+    <style>
+      html {
+        cursor: url("/assets/cursors/beaver.png"), auto;
+      }
+
+      body {
+        background: url("/assets/june/wood.jpg");
+        background-repeat: no-repeat;
+        background-size:cover;
+        font-family: "arial narrow";
+        font-size: 15px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+      }
+
+      .headertext {
+        transform: rotate(-2deg);
+        margin-left: -100px;
+        z-index: 10;
+        position: absolute;
+        margin-top: -125px;
+      }
+
+      #text05 {
+        text-shadow: 2px 1px #9f8064, -2px 2px #6a3939, 2px -1px #e0c3ab,
+          -2px -2px #b8a46b;
+        line-height: 0em;
+      }
+
+      #text05 {
+        color: #ffedad;
+        font-family: "Lust";
+        font-size: 70px;
+        line-height: 2.5;
+        font-weight: 400;
+        text-decoration: none;
+        text-decoration: none;
+        display: inline-block;
+        position: relative;
+      }
+
+      .effect-shine {
+        display: inline-block;
+        font-size: 70px;
+        font-family: "Lust";
+        text-decoration: none;
+        line-height: 2.5;
+        font-weight: 400;
+        text-decoration: none;
+        text-decoration: none;
+        display: inline-block;
+        word-spacing: -15px;
+      }
+
+      .effect-shine::after {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        color: transparent;
+        opacity: 80%;
+        background: linear-gradient(
+          -75deg,
+          rgba(255, 255, 255, 0) 30%,
+          rgba(255, 255, 255, 0.9) 50%,
+          rgba(255, 255, 255, 0) 70%
+        );
+        background-size: 200% 200%;
+        background-repeat: no-repeat;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        white-space: nowrap;
+        animation: shineText 2s linear infinite;
+      }
+
+      @-webkit-keyframes shine {
+        from {
+          -webkit-mask-position: 150%;
+        }
+
+        to {
+          -webkit-mask-position: -50%;
+        }
+      }
+
+      @keyframes shineText {
+        0% {
+          background-position: 200% 0;
+        }
+        100% {
+          background-position: -100% 0;
+        }
+      }
+
+      ::-webkit-scrollbar {
+        background: none;
+        width: 15px;
+        height: 7px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: url(/assets/june/dots.webp);
+        background-size: auto;
+        border-radius: 15px;
+        box-shadow: 1px 1px 1px inset white, -1px -1px 1px inset #96a5748a;
+      }
+
+      h1 a {
+        font-size: 2em;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .container {
+        width: 720px;
+        height: 600px;
+        display: flex;
+        margin: auto;
+        margin-top: 120px;
+        z-index: 1px;
+        position: relative;
+        filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+    border-image: url(/assets/june/lace.png) 60 fill round;
+    border-width: 20px;
+    border-style: solid;
+      }
+
+      .innercontainer {
+        background: url(/assets/june/orange.png);
+        width: 675px;
+        height: 555px;
+        margin: auto;
+        border: 1px rgb(99, 74, 40) dashed;
+        border-radius: 10px;
+        z-index: 2;
+        padding: 10px;
+      }
+
+      .innerinner {
+        background:url(assets/sprkbg2.gif), rgb(254, 250, 216);
+        width: 644px;
+        height:525px;
+        border-radius: 10px;
+        margin:auto;
+        margin-top:7px;
+        border: 1px rgb(99, 74, 40) dashed;
+        z-index:3;
+        padding:10px;
+        text-align: justify;
+      }
+
+      .innerinner2 {
+        background:white;
+        width: 613px;
+        height:495px;
+        border-radius: 10px;
+        margin:auto;
+        margin-top:4px;
+        border: 1px rgb(99, 74, 40) dashed;
+        z-index:3;
+        padding:10px;
+        text-align: justify;
+        overflow-y: scroll;
+      }
+
+      ::selection {
+      background: #ffedad;
+      color: black;
+      }
+
+      .counterouter {
+                   width:123px;
+                   height:73px;
+                   background: url("/assets/june/orange.png"), #fff;
+                   border:1px dashed rgb(99, 74, 40);
+                   align-items: center; 
+                   justify-content: center;
+                   display: flex;
+                  }
+                  
+                  .counterinner {
+                   width: 95px;
+                   height:43px;
+                   background: url("/shrines/assets1/slant.gif"), #fff;
+                   padding:3px;
+                   border:1px solid rgb(99, 74, 40);
+                   margin:auto;
+                   color:black;
+                  }
+
+                      .jiggle {
+      animation: jerky 0.5s infinite;
+    }
+
+    @keyframes jerky {
+      0% {
+        transform: rotate(2deg);
+      }
+
+      50% {
+        transform: rotate(2deg);
+      }
+
+      51% {
+        transform: rotate(-2deg);
+      }
+
+      100% {
+        transform: rotate(-2deg);
+      }
+    }
+
+    hr.new2 {
+  border-top: 2px dashed rgb(99, 74, 40);
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+  </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="innercontainer">
+        <div class="headertext">
+          <h1>
+            <div class="effect-shine" data-text="Happy Birthday!">
+              <h2 id="text05">
+                H<span style="color: #ffecd1">a</span>p<span
+                  style="color: #ffecd1"
+                  >p</span
+                >y<span style="color: #ffecd1">B</span>i<span
+                  style="color: #ffecd1"
+                  >r</span
+                >t<span style="color: #ffecd1">h</span>d<span
+                  style="color: #ffecd1"
+                  >a</span
+                >y<span style="color: #ffecd1">!</span>
+              </h2>
+            </div>
+          </h1>
+        </div>
+        <div class="innerinner">
+          <div class="innerinner2">
+        <p>
+          it’s your birthday. and i don’t know if that feels like a big deal to you, but it does to me.
+you’re still here, still trying, still being your very stupid self,
+and that’s worth celebrating with something dumb and a little (super) awkward . . . like this page. Nyao Cyap
+          <img
+            src="/assets/june/linuxblush.png"
+            style="height: 200px;filter: drop-shadow(0 0 4px rgba(69, 69, 69, 0.5));"
+            align="right"
+          /><br> <hr class="new2">I’ve been thinking for a long time about how to write this without overdoing it, but also without holding back. You’re important to me, you should know that, but sometimes I want to say it more clearly, so here’s me saying it properly for once. there’s no guidebook for whatever this is, but somehow we keep figuring it out.
+you make things lighter. not always easy, but lighter, better.
+even when we’re both quiet or stuck in our heads, being with you still feels like the right place.
+i don’t think i’ve said it enough: i like doing life with you, even when it’s messy.
+          You’re the kind of person who’s good to be around, even in silence. I see comfort and light in you. You’re smart and strange in the best way, and you’re full of things that you maybe don’t give yourself credit for, dumb humor, kindness, depth, I could go on and on. I love all those about you. You try, even when your brain makes that harder than it should be, and that itself is appreciated. I see you and what you do. I hate seeing you think you’re not enough
+          , what you are is more than enough.<img
+            src="/assets/june/linuxblush2.png"
+            style="height: 200px;filter: drop-shadow(0 0 1px rgba(69, 69, 69, 0.5));"
+            align="left"
+          /> That means you don’t have to earn your place here. You don’t have to prove your worth by doing more, being more, fixing yourself, or performing some version of who you think you <i>should</i> be.
+          Who you already are, in your mess and effort and stillness and confusion, is already enough. You are not a project to be completed before you're worthy of love, comfort, or belonging. It means your presence is valuable, even when you feel quiet or low or uncertain. You’re not only “enough” when you’re thriving or successful or cheerful, you’re enough right now, even in the in-between spaces where everything feels unclear. 
+          Being “enough” doesn’t mean you’re flawless, it means that your flaws don’t disqualify you, both of us often forget that. Your struggles don’t cancel out your worth. And if it’s hard to believe all of this sometimes,that’s okay too.
+          You don’t have to believe it every second, just know that it’s still true. All of this is.
+        </p>
+        <hr class="new2">
+<div style="display: flex; margin: auto; align-items: center; justify-content: center;">
+  <img src="/assets/june/trot.gif" style="image-rendering: pixelated; filter: drop-shadow(0 0 2px rgba(69, 69, 69, 0.5));height: 93px; margin-left: 4px;" />
+  <img src="/assets/june/cat.png" class="jiggle" style="filter: drop-shadow(0 0 2px rgba(69, 69, 69, 0.5));height: 80px; margin-right: 4px;" />
+  <div class="counterouter">
+    <div class="counterinner">
+      <script>
+        var montharray = new Array("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec");
+        function countup(yr, m, d) {
+          var today = new Date();
+          var todayy = today.getFullYear();
+          var todaym = today.getMonth();
+          var todayd = today.getDate();
+          var todaystring = montharray[todaym] + " " + todayd + ", " + todayy;
+          var paststring = montharray[m - 1] + " " + d + ", " + yr;
+          var difference = Math.round((Date.parse(todaystring) - Date.parse(paststring)) / (24 * 60 * 60 * 1000));
+          document.write(" " + difference + " days together <3");
+        }
+        countup(2024, 9, 6);
+      </script>
+    </div>
+  </div>
+  <img src="/assets/june/cat2.png" class="jiggle" style="filter: drop-shadow(0 0 2px rgba(69, 69, 69, 0.5));height: 80px; margin-left: 4px;" />
+  <img src="/assets/june/stand.png" style="image-rendering: pixelated; filter: drop-shadow(0 0 2px rgba(69, 69, 69, 0.5));height: 80px; margin-left: 4px;" />
+</div>
+<hr class="new2">
+<center>
+<img src="/assets/june/encarnine3.png" style="image-rendering: pixelated;">
+</center>
+        </div></div>
+        <img
+          style="
+            position: absolute;
+            pointer-events: none;
+            z-index: 10;
+            scale: 60%;
+            rotate: -25deg;
+            bottom: -240px;
+            right: -250px;
+              image-rendering: pixelated;
+          "
+          src="/assets/june/flower.png"
+        />
+      </div>
+    </div>
+  </body>
+</html>

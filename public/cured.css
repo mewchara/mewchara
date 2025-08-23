@@ -1,0 +1,54 @@
+::selection {
+  background: darkgray;
+  color: black;
+}
+
+@font-face {
+  font-family: "pixel";
+  src: url(/assets/fonts/Pixel.woff);
+}
+
+@font-face {
+  font-family: "Lust";
+  src: url(/assets/fonts/LustScript.ttf);
+}
+
+@font-face {
+  font-family: "basiic";
+  src: url(/assets/fonts/basiic.ttf);
+}
+
+@font-face {
+  font-family: "freepixel";
+  src: url(/assets/fonts/FreePixel.ttf);
+}
+
+@font-face {
+  font-family: "gothitch";
+  src: url(/assets/fonts/itchgothic.ttf);
+}
+
+@font-face {
+  font-family: "spirit";
+  src: url(/assets/fonts/Spirit.ttf);
+}
+
+@font-face {
+  font-family: "adorabledoll";
+  src: url(/assets/fonts/AdorableDoll.ttf);
+}
+
+@font-face {
+  font-family: "angelwish";
+  src: url(/assets/fonts/angelwish.ttf);
+}
+
+@font-face {
+  font-family: "kings";
+  src: url(/assets/fonts/kings.otf);
+}
+
+@font-face {
+  font-family: "magnolia";
+  src: url(/assets/fonts/MagnoliaScript.otf);
+}

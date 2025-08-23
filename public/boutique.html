@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      document.addEventListener("contextmenu", (event) =>
+        event.preventDefault()
+      );
+    </script>
+
+    <title>༺ velvet boutique ♰</title>
+    <link rel="icon" type="image/x-icon" href="/personal/crest.gif" />
+
+    <script type="text/javascript">
+      (function titleScroller(text) {
+        document.title = text;
+        console.log(text);
+        setTimeout(function () {
+          titleScroller(text.substr(1) + text.substr(0, 1));
+        }, 200);
+      })("༺ velvet boutique ༻♰");
+    </script>
+
+    <style>
+      html {
+        cursor: url("/assets/cursors/sword.png"), auto;
+      }
+
+      body {
+        background: url("/assets/mysozai/frilltop.png") top repeat-x,
+          url("/assets/mysozai/frillbottom.png") bottom repeat-x,
+          url("/assets/mysozai/diagred2.png");
+        font-size: 16px;
+        color: black;
+        min-height: 100vh;
+        font-family: "garamond";
+        text-shadow: gray 0px 0px 3px;
+        overflow-x: hidden;
+        position: relative;
+      }
+
+      a:link {
+        color: white;
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      a:visited {
+        color: white;
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #858585;
+        background-color: transparent;
+        text-decoration: underline;
+        cursor: crosshair;
+      }
+
+      a:active {
+        color: #858585;
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      ::selection {
+        background: darkgray;
+        color: black;
+      }
+
+      @font-face {
+        font-family: "Pixel";
+        src: url(/assets/fonts/Pixel.woff);
+      }
+
+      @font-face {
+        font-family: "basiic";
+        src: url(/assets/fonts/basiic.ttf);
+      }
+
+      @font-face {
+        font-family: "freepixel";
+        src: url(/assets/fonts/FreePixel.ttf);
+      }
+
+      @font-face {
+        font-family: "gothitch";
+        src: url(/assets/fonts/itchgothic.ttf);
+      }
+
+      @font-face {
+        font-family: Spirit;
+        src: url(/assets/fonts/Spirit.ttf);
+      }
+
+      ::-webkit-scrollbar {
+        width: 5px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: white;
+        border: 1px solid black;
+        border-radius: 0px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: black;
+        border-radius: 0px;
+      }
+
+      .container {
+        display: grid;
+        width: 700px;
+        height: 900px;
+        margin: auto;
+        background: transparent;
+        border: 1px black solid;
+        grid-template-columns: 200px 500px;
+        grid-template-rows: 100px auto;
+        gap: 0px 0px;
+        grid-template-areas:
+          "heading heading"
+          "navigation mainContent";
+      }
+
+      .heading {
+        grid-area: heading;
+        background: url("/assets/lacebrdr2.png") repeat-x, top,
+          url("/assets/mysozai/whitehart.png");
+        border-bottom: solid 1px black;
+        position: relative;
+      }
+
+      .navigation {
+        grid-area: navigation;
+        background: url("/assets/mysozai/blackargyle2.png");
+        border-right: 1px solid black;
+      }
+
+      .mainContent {
+        grid-area: mainContent;
+        background: url("/assets/mysozai/blackargyledark.png");
+      }
+
+      .headingtxt {
+        font-family: "gothitch";
+        font-size: 120px;
+        position: absolute;
+        filter: drop-shadow(0px 1px black) drop-shadow(0 -1px black)
+          drop-shadow(1px 0 black) drop-shadow(-1px 0 black)
+          drop-shadow(-2px -1px white) drop-shadow(-2px -1px gray);
+        animation: jerky 0.5s infinite;
+        text-shadow: none;
+        margin-left: -20px;
+      }
+
+      .headingtxt2 {
+        font-family: "spirit";
+        font-size: 40px;
+        position: absolute;
+        margin-left: 170px;
+        color: #642c2c;
+        filter: drop-shadow(0px 1px black) drop-shadow(0 -1px black)
+          drop-shadow(1px 0 black) drop-shadow(-1px 0 black)
+          drop-shadow(0px 1px white) drop-shadow(0 -1px white)
+          drop-shadow(1px 0 white) drop-shadow(-1px 0 white);
+        text-shadow: none;
+      }
+
+      @keyframes jerky {
+        0% {
+          transform: rotate(2deg);
+        }
+
+        50% {
+          transform: rotate(2deg);
+        }
+
+        51% {
+          transform: rotate(-2deg);
+        }
+
+        100% {
+          transform: rotate(-2deg);
+        }
+      }
+
+      .main2 {
+        background: url(/assets/linesgray.png);
+        margin: auto;
+        width: 460px;
+        height: 760px;
+        margin-top: 20px;
+        border: 1px solid black;
+        overflow-y: auto;
+      }
+
+      .headingbox {
+        background: white;
+        margin: auto;
+        padding: 3px;
+        width: 200px;
+        height: 60px;
+        margin-top: 25px;
+        margin-left: 480px;
+        border: 1px solid black;
+        outline: 1px solid #ebebeb;
+        position: absolute;
+        overflow-x: hidden;
+        overflow-y: scroll;
+      }
+
+      .navitext {
+        background: url(/assets/linesgray.png);
+        margin: auto;
+        padding: 3px;
+        width: 80%;
+        height: 760px;
+        margin-top: 20px;
+        border: 1px solid black;
+      }
+
+      .frill {
+        height: 900px;
+        z-index: 1;
+        position: absolute;
+        background: url("/assets/mysozai/frillleft.png") repeat-y;
+      }
+
+      #right {
+        left: -20px;
+        transform: rotate(180deg);
+      }
+
+      #left {
+        right: -20px;
+      }
+
+      .notice {
+        height: 100px;
+        width: 420px;
+        border: 1px solid black;
+        background: white;
+        padding: 5px;
+        margin: auto;
+        margin-top: 15px;
+      }
+
+      .bigtext {
+        font-family: "gothitch";
+        font-size: 35px;
+      }
+
+      .bgs {
+        border: 1px solid black;
+      }
+
+      @keyframes flicker {
+        0% {
+          opacity: 1;
+          text-shadow: 0 0 5px gray;
+        }
+        50% {
+          opacity: 0.7;
+          text-shadow: 0 0 10px black;
+        }
+        100% {
+          opacity: 1;
+          text-shadow: 0 0 5px gray;
+        }
+      }
+
+      footer {
+        text-align: center;
+        color: white;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+      }
+
+      .bgs {
+        border: 1px solid black;
+        transition: opacity 0.3s ease-in-out;
+      }
+
+      .bgs:hover {
+        opacity: 0.7;
+        cursor: pointer;
+      }
+    </style>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const images = document.querySelectorAll(".bgs");
+
+        images.forEach((img) => {
+          img.addEventListener("mouseover", function () {
+            document.body.style.backgroundImage = `url(${this.src})`;
+            document.body.style.backgroundRepeat = "repeat";
+            document.body.style.backgroundSize = "auto";
+          });
+
+          img.addEventListener("mouseout", function () {
+            document.body.style.backgroundImage =
+              "url('/assets/mysozai/diagred2.png')"; // Default background
+            document.body.style.backgroundRepeat = "repeat";
+            document.body.style.backgroundSize = "auto";
+          });
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="frill" id="left"></div>
+      <div class="frill" id="right"></div>
+      <!--<img style="position:fixed; right:50px; bottom:-8px;filter: drop-shadow(0px 1px black);" src="/assets/mysozai/peak.png">-->
+      <!-- MAIN TEXT RIGHT -->
+      <div class="heading">
+        <div class="headingtxt">Boutique</div>
+        <div class="headingtxt2">velvet</div>
+        <img
+          style="
+            position: absolute;
+            right: 220px;
+            bottom: -35px;
+            filter: drop-shadow(3px 2px black);
+          "
+          src="/assets/mysozai/coffinclock.png"
+        />
+        <div class="headingbox">
+          <p style="margin-top: 0; margin-bottom: 0; font-size: 12px">
+            <span
+              style="
+                font-family: 'gothitch';
+                font-size: 20px;
+                text-shadow: none;
+              "
+              >Terms of Service</span
+            ><br />
+            <img src="/personal/bullet.png" /> please link back or credit me in
+            some sort of way<br />
+            <img src="/personal/bullet.png" /> do not trace or edit<br />
+            <img src="/personal/bullet.png" /> for personal use <b>only</b>
+          </p>
+        </div>
+      </div>
+      <!-- NAVIGATION ON LEFT -->
+      <div class="navigation">
+        <div class="navitext">
+          <br />
+          <p align="center" style="margin-top: 0">
+            <span style="font-size: 22px" class="bigtext"
+              >Curated Elegance</span
+            >
+          </p>
+          <p
+            align="left"
+            style="
+              padding-left: 10px;
+              letter-spacing: 3px;
+              text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black,
+                0 -0.5px black, 0px 0px 10px gray;
+            "
+          >
+            <img src="/personal/bullet.png" />
+            <a href="#bgs">Backgrounds<br /></a><br />
+            <img src="/personal/bullet.png" />
+            <a href="#dividers">Dividers<br /></a><br />
+            <img src="/personal/bullet.png" />
+            <a href="#borders">Borders<br /></a><br />
+            <img src="/personal/bullet.png" />
+            <a href="#bullets">Bullets<br /></a><br />
+            <img src="/personal/bullet.png" />
+            <a href="#graphics">Graphics<br /></a>
+          </p>
+        </div>
+      </div>
+      <!-- MAIN TEXT RIGHT -->
+      <div class="mainContent">
+        <div class="main2">
+          <div class="notice">
+            <center>
+              <p>
+                <img src="/personal/bullet.png" /> Welcome, kindred soul.<br />
+                May you find what you seek on this site
+                <img src="/personal/bullet.png" />
+              </p>
+              <p style="margin-top: 0; margin-bottom: 0; font-size: 12px">
+                <span
+                  style="
+                    font-family: 'gothitch';
+                    font-size: 25px;
+                    text-shadow: none;
+                    animation: flicker 1.5s infinite alternate;
+                  "
+                  >Please read terms of service before use.</span
+                >
+              </p>
+            </center>
+          </div>
+          <br />
+          <center>
+            <br />
+            <span id="bgs" class="bigtext">Backgrounds</span>
+            <br />
+            <br />
+            <b>Tartan</b>
+            <br />
+            <br />
+            <img src="/assets/mysozai/2.png" class="bgs" />
+            <img src="/assets/mysozai/3.png" class="bgs" />
+            <img src="/assets/mysozai/blackargyle2.png" class="bgs" />
+            <img src="/assets/mysozai/blackargyledark.png" class="bgs" />
+            <br />
+            <img src="/assets/mysozai/1.png" class="bgs" />
+            <img src="/assets/mysozai/blackargyle.png" class="bgs" />
+            <br />
+            <br />
+            <img src="/assets/mysozai/red2.png" class="bgs" />
+            <img src="/assets/mysozai/red.png" class="bgs" />
+            <img src="/assets/mysozai/diagred2.png" class="bgs" />
+            <img src="/assets/mysozai/red3.png" class="bgs" />
+            <img src="/assets/mysozai/diagred.png" class="bgs" />
+            <img src="/assets/mysozai/diagred3.png" class="bgs" />
+            <br />
+            <br />
+            <b>Lace</b>
+            <br />
+            <br />
+            <img src="/assets/mysozai/whitehart.png" class="bgs" />
+            <img src="/assets/mysozai/grayhart.png" class="bgs" />
+            <img src="/assets/mysozai/darkgray.png" class="bgs" />
+            <img src="/assets/mysozai/blkhart.png" class="bgs" />
+            <br />
+            <br />
+            <b>Argyle</b>
+            <br />
+            <br />
+            <img src="/assets/blkarg.png" class="bgs" />
+            <img src="/assets/linesgray.png" class="bgs" />
+            <img src="/assets/linesblk.png" class="bgs" />
+            <br />
+            <br />
+            <b>Dot</b>
+            <br />
+            <br />
+            <img src="/assets/blkdot.png" class="bgs" />
+            <br />
+            <br />
+            <br />
+            <span id="dividers" class="bigtext">Dividers</span>
+            <br />
+            <br />
+            <b>Lace</b>
+            <br />
+            <br />
+            <img src="/assets/mysozai/frillleft.png" />
+            <img src="/assets/mysozai/frillright.png" />
+            <img src="/assets/mysozai/frilltop.png" />
+            <img src="/assets/mysozai/frillbottom.png" />
+            <br />
+            <br />
+            <br />
+            <span id="borders" class="bigtext">Borders</span>
+            <br />
+            <br />
+            <img src="/assets/whitelace2.png" />
+            <img src="/assets/blklace3.png" />
+            <img src="/assets/whitelace21.png" />
+            <br />
+            <img style="width: 72px; height: 69px" src="/assets/lace3.png" />
+            <img
+              style="width: 72px; height: 69px; background: gray"
+              src="/assets/lace5.png"
+            />
+            <img style="width: 72px; height: 69px" src="/assets/blklace.png" />
+            <img style="width: 72px; height: 69px" src="/assets/blklace2.png" />
+            <br />
+            <br />
+            <br />
+            <span id="bullets" class="bigtext">Bullets</span>
+            <br />
+            <br />
+            <img src="/personal/bullet.png" />
+            <img style="background: gray" src="/assets/mysozai/bullet2.png" />
+            <img src="/assets/mysozai/bullet3.png" />
+            <br />
+            <br />
+            <br />
+            <span id="graphics" class="bigtext">Graphics</span>
+            <br />
+            <img src="/assets/kurosticker.webp" />
+            <img src="/assets/guestbook.webp" />
+            <img src="/assets/guestbook2.png" />
+            <img src="/assets/mysozai/coffinclock2.png" />
+            <img src="/assets/mysozai/coffinclock.png" />
+            <br />
+          </center>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p style="margin-top: 0px">
+        <a href="/mainpage.html">⬅ go back? </a> 2024 © bound with love,
+        mewchara
+      </p>
+    </footer>
+  </body>
+</html>

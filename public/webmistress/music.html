@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>music of the soul</title>
+    <link href="/cured.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="icon" type="image/x-icon" href="/personal/crown.gif" />
+
+    <style>
+      html {
+        cursor: url("/assets/cursors/cross2.cur"), auto;
+      }
+
+      body {
+        background: url("/personal/racebg.gif");
+        font-family: "garamond";
+        font-size: 14px;
+        position: relative;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+      }
+
+      #aboutOutput {
+        margin-top: 5px;
+        width: 200px;
+        background: rgb(133, 132, 132);
+      }
+
+      .halves {
+        display: flex;
+        height: 100vh;
+      }
+
+      .firsthalf {
+        width: 50%;
+        height: 100vh;
+        background: transparent;
+      }
+
+      .secondhalf {
+        width: 50%;
+        height: 100vh;
+        background: transparent;
+      }
+      .container {
+        width: 400px;
+        height: 100vh;
+        background-image: linear-gradient(rgb(134, 134, 134), rgb(22, 22, 22));
+        display: flex;
+      }
+
+      .header {
+        height: 205px;
+        background-image: linear-gradient(rgb(134, 134, 134), rgb(85, 85, 85));
+        border-bottom: 1px black solid;
+        z-index: 10;
+      }
+
+      .headertext {
+        position: absolute;
+        margin-left: 20px;
+        margin-top: 20px;
+        font-family: "gothitch";
+        font-size: 80px;
+        color: rgb(36, 36, 36);
+        filter: drop-shadow(2px 0px 0 black)
+          drop-shadow(0 0 6px rgb(163, 163, 163))
+          drop-shadow(0 0 7px rgb(41, 41, 41));
+      }
+
+      .sidebar {
+        width: 50px;
+        height: inherit;
+        margin-top: 206px;
+        background: url("/assets/linesgray.png");
+        padding: 7px;
+        font-family: "kings";
+        font-size: 17px;
+      }
+
+      .innercontainer {
+        background: url("/assets/note.gif"), rgb(36, 36, 36);
+        height: inherit;
+        width: 350px;
+        margin-top: 206px;
+      }
+
+      .innerinner {
+        background: url("/personal/blackstripe.png");
+        width: 80%;
+        height: inherit;
+        margin: auto;
+        padding: 13px;
+        color: rgb(209, 209, 209);
+        font-family: arial;
+        font-weight: 600;
+        font-size: 12px;
+        text-align: justify;
+      }
+    </style>
+
+    <script defer="" src="quotes.js"></script>
+  </head>
+
+  <body>
+    <div class="halves">
+      <div class="firsthalf">
+        <div class="container">
+          <div class="header">
+            <img
+              src="/personal/music.png"
+              style="
+                position: absolute;
+                margin-top: -60px;
+                margin-left: -77px;
+                filter: drop-shadow(0.5px 1px 0 black);
+              "
+            />
+            <div class="headertext">
+              Cassette <br />
+              <span style="margin-left: 80px; color: rgb(48, 48, 48)"
+                >Reverie</span
+              >
+            </div>
+          </div>
+          <div class="sidebar">
+            <img src="/personal/bullet.png" /> main <br />
+            <img src="/personal/bullet.png" /> album reviews
+          </div>
+          <div class="innercontainer">
+            <div class="innerinner">
+              <p>
+                The echo of my soul is music eternal. <br /><br />
+                I truly believe that without music, we'd be hollow shells. It's
+                carried me through my darkest years and woven itself into the
+                rhythm of my daily life.
+                <br />
+                <img
+                  style="max-width: 100%; margin-top: 5px"
+                  src="/personal/piano.gif"
+                />
+              </p>
+              <p>
+                A$AP Rocky, Bauhaus, beabadoobee, Billie Eilish, Björk, Blood
+                Orange, Cigarettes After Sex, Cocteau Twins, Daniel Caesar,
+                Deftones, Frank Ocean, George Michael, Imogen Heap, Joy
+                Division, Kali Uchis, Lady Gaga, Lana Del Rey, Laufey, Lebanon
+                Hanover, Melanie Martinez, Miguel, Miss Construction, Ne-Yo,
+                Paramore, Piero Piccioni, PinkPantheress, Radiohead, Sade,
+                Siouxsie and the Banshees, Sisters of Mercy, The Cure, The
+                Marías, The Neighbourhood, The Poles, The Smiths, The Weeknd,
+                Tommy heavenly6, Tyler, The Creator, wave to earth
+                <img
+                  style="max-width: 100%; margin-top: 5px"
+                  src="/personal/piano.gif"
+                />
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="secondhalf">
+        <center>
+          <div id="img-load"><img src="/personal/freya.png" /></div>
+          <button id="aboutBtn">lyrics♫♪</button>
+          <div id="aboutOutput"></div>
+          <br />
+        </center>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>♛ the end is just the beginning..♠️..</title>
+    <script type="text/javascript">
+      (function titleScroller(text) {
+        document.title = text;
+        console.log(text);
+        setTimeout(function () {
+          titleScroller(text.substr(1) + text.substr(0, 1));
+        }, 100);
+      })("♛ the end is just the beginning..♠️.. ");
+    </script>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="everafterassets/brookepage.png"
+    />
+
+    <script type="text/javascript">
+      // <![CDATA[
+      var speed = 150; // speed of wobbling, lower is faster
+      var height = 3; // height of wobbling in pixels
+      var alink = ""; // page to link text to (set to ="" for no link)
+
+      /****************************
+       *    Wobbly Text Effect     *
+       *(c) 2003-6 mf2fm web-design*
+       *  http://www.mf2fm.com/rv  *
+       * DON'T EDIT BELOW THIS BOX *
+       ****************************/
+      var wobtxt,
+        wobble,
+        wobcnt = 0;
+      window.onload = function () {
+        if (document.getElementById) {
+          var i, wobli;
+          wobble = document.getElementById("wobble");
+          wobtxt = wobble.firstChild.nodeValue;
+          while (wobble.childNodes.length)
+            wobble.removeChild(wobble.childNodes[0]);
+          for (i = 0; i < wobtxt.length; i++) {
+            wobli = document.createElement("span");
+            wobli.setAttribute("id", "wobb" + i);
+            wobli.style.position = "relative";
+            wobli.appendChild(document.createTextNode(wobtxt.charAt(i)));
+            if (alink) {
+              wobli.style.cursor = "pointer";
+              wobli.onclick = function () {
+                top.location.href = alink;
+              };
+            }
+            wobble.appendChild(wobli);
+          }
+          setInterval("wobbler()", speed);
+        }
+      };
+
+      function wobbler() {
+        for (var i = 0; i < wobtxt.length; i++)
+          document.getElementById("wobb" + i).style.top =
+            Math.round(height * Math.sin(i + wobcnt)) + "px";
+        wobcnt++;
+      }
+      // ]]>
+    </script>
+
+    <style>
+      html {
+        cursor: url("everafterassets/everaftercursor2.png"), auto;
+      }
+
+      body {
+        color: black;
+        font-family: "lovepotionbold";
+        background-image: url(everafterassets/redpattern.png);
+        background-attachment: fixed;
+        background-repeat: repeat;
+        font-size: 25px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        text-shadow: 0px 0px 5px gray;
+      }
+
+      @font-face {
+        font-family: "lovepotion";
+        src: url(everafterassets/fonts/LovePotion.woff);
+      }
+
+      @font-face {
+        font-family: "lovepotionbold";
+        src: url(everafterassets/fonts/LovePotion-Bold.woff);
+      }
+
+      @font-face {
+        font-family: "typewriter";
+        src: url(everafterassets/fonts/TravelingTypewriter.ttf);
+      }
+
+      *::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      *::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      *::-webkit-scrollbar-thumb {
+        background-color: #2b2b2b;
+        border-radius: 40px;
+        border: 0px solid;
+      }
+
+      h1 {
+        font-family: "lovepotion";
+        font-size: 110px;
+        margin: -10px 280px;
+        margin-bottom: -50px;
+        filter: drop-shadow(2px 0 0 #ddb272) drop-shadow(0 2px 0 #ddb272)
+          drop-shadow(-2px 0 0 #ddb272) drop-shadow(0 -2px 0 #ddb272)
+          drop-shadow(0px 1px 1px #b54b27) drop-shadow(0px 1px 1px #b54b27);
+        color: black;
+        text-shadow: none;
+      }
+
+      h2 {
+        text-align: center;
+        font-size: 40px;
+        font-family: "typewriter";
+        margin-left: 250px;
+        margin-top: -70px;
+        margin-bottom: -13px;
+        filter: drop-shadow(2px 0 0 white) drop-shadow(0 2px 0 white)
+          drop-shadow(-2px 0 0 white) drop-shadow(0 -2px 0 white)
+          drop-shadow(0px 1px 1px #b54b27) drop-shadow(0px 1px 1px #b54b27);
+        color: black;
+        text-shadow: none;
+      }
+
+      .eahlogo {
+        align-content: center;
+        position: absolute;
+        background: transparent;
+        justify-content: center;
+        margin: -200px 0px 0px 270px;
+        z-index: 3;
+      }
+
+      .containerouter {
+        margin: auto;
+        height: 483px;
+        width: 850px;
+        background: url(everafterassets/heart-underline.png) repeat-x,
+          url(everafterassets/blackstripe.png);
+        align-content: center;
+        border: 1px gray solid;
+      }
+
+      .containerinner {
+        margin: auto;
+        height: 413px;
+        width: 780px;
+        background: url(everafterassets/pattern-neutral.gif);
+        overflow: auto;
+        text-align: center;
+        background: url(everafterassets/everafterbg.png);
+        border-radius: 20px;
+        border: 1px gray solid;
+      }
+
+      .eahgif {
+        margin-top: -80px;
+        background: url(everafterassets/eahgif.gif);
+        background-repeat: no-repeat;
+        mask: url(everafterassets/maskywasky.png);
+        mask-repeat: no-repeat;
+        mask-size: 490px 100px;
+        mask-position: 0px;
+        width: 498px;
+        height: 281px;
+        margin-bottom: 10px;
+      }
+
+      .infobox {
+        width: 690px;
+        height: 250px;
+        margin-top: -90px;
+        background: white;
+        padding: 10px;
+        border: 2px black solid;
+        border-radius: 20px;
+        filter: drop-shadow(2px 0 0 #ddb272) drop-shadow(0 2px 0 #ddb272)
+          drop-shadow(-2px 0 0 #ddb272) drop-shadow(0 -2px 0 #ddb272);
+        overflow-y: scroll;
+      }
+
+      h3 {
+        font-family: "typewriter";
+        font-size: 18px;
+        text-align: center;
+        color: black;
+        text-shadow: drop-shadow(2px 0 0 black) drop-shadow(0 2px 0 black)
+          drop-shadow(-2px 0 0 black) drop-shadow(0 -2px 0 black);
+      }
+
+      .colour {
+        color: darkred;
+      }
+
+      .qs {
+        color: #381547;
+      }
+
+      .boldy {
+        font-size: 30px;
+        color: #381547;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><div id="wobble">Ever After</div></h1>
+    <h2>a web clique 4</h2>
+
+    <div class="containerouter">
+      <div class="containerinner">
+        <img class="eahlogo" src="everafterassets/eachlogodither.png" />
+
+        <center>
+          <div class="eahgif"></div>
+        </center>
+        <center>
+          <div class="infobox">
+            <img src="everafterassets/quiz-royal-seal.png" align="left" />
+            <p align="left">
+              Welcome to <span class="colour">Ever After</span>, a mini web
+              clique created for anyone who loves the animated series"
+            </p>
+            <p align="left">
+              <span class="colour"><i>Ever After High</i></span> !
+            </p>
+            <h3>
+              ♠ Ever After was launched by <u>Mimi</u> on the 26th of February,
+              2025 ♦
+            </h3>
+            <p align="left">
+              Q: <span class="qs"><u>"Soo what's a web clique?"</u></span> A web
+              clique connects users who share similar interests across the wide
+              web. I made this for like-minded,
+              <span class="colour">fableous </span> people!
+            </p>
+            <p>
+              <span class="boldy"><u>RULES:</u></span>
+            </p>
+            <p align="left">
+              <span class="colour">1.</span> Must link back to this site with a
+              graphic of your choice <br /><span class="colour">2.</span>
+              Download the button/graphic to your
+              <span class="qs"><u>own</u></span> server (NO hotlinking) please,
+              thank you!
+            </p>
+            <p>
+              <span class="boldy"><u>Graphics/Links:</u></span>
+            </p>
+            <img src="everafterassets/eah88x31.png" />
+            <img src="everafterassets/everafter88x31.gif" />
+            <img src="everafterassets/88x312.png" />
+            <img src="everafterassets/31x31anim.gif" />
+            <img src="everafterassets/31x31.png" />
+            <img src="everafterassets/31x31gray.png" />
+            <br />
+            <img src="everafterassets/ealogobook.png" />
+            <img src="everafterassets/eabookquill.png" />
+            <img src="everafterassets/eabookquillsprk.png" />
+            <p>do not take for urself:)</p>
+            <img src="everafterassets/quiz-rebel-seal.png" align="right" />
+          </div>
+        </center>
+      </div>
+    </div>
+  </body>
+</html>

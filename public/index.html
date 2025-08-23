@@ -1,0 +1,476 @@
+<html>
+  <head>
+    <link rel="icon" type="image/x-icon" href="/assets/mew32.gif" />
+
+    <script type="text/javascript">
+      // <![CDATA[
+      var colour = "gray";
+      var sparkles = 50;
+
+      var x = (ox = 400);
+      var y = (oy = 300);
+      var swide = 800;
+      var shigh = 600;
+      var sleft = (sdown = 0);
+      var tiny = new Array();
+      var star = new Array();
+      var starv = new Array();
+      var starx = new Array();
+      var stary = new Array();
+      var tinyx = new Array();
+      var tinyy = new Array();
+      var tinyv = new Array();
+
+      window.onload = function () {
+        if (document.getElementById) {
+          var i, rats, rlef, rdow;
+          for (var i = 0; i < sparkles; i++) {
+            var rats = createDiv(3, 3);
+            rats.style.visibility = "hidden";
+            rats.style.zIndex = "999";
+            document.body.appendChild((tiny[i] = rats));
+            starv[i] = 0;
+            tinyv[i] = 0;
+            var rats = createDiv(5, 5);
+            rats.style.backgroundColor = "transparent";
+            rats.style.visibility = "hidden";
+            rats.style.zIndex = "999";
+            var rlef = createDiv(1, 5);
+            var rdow = createDiv(5, 1);
+            rats.appendChild(rlef);
+            rats.appendChild(rdow);
+            rlef.style.top = "2px";
+            rlef.style.left = "0px";
+            rdow.style.top = "0px";
+            rdow.style.left = "2px";
+            document.body.appendChild((star[i] = rats));
+          }
+          set_width();
+          sparkle();
+        }
+      };
+
+      function sparkle() {
+        var c;
+        if (Math.abs(x - ox) > 1 || Math.abs(y - oy) > 1) {
+          ox = x;
+          oy = y;
+          for (c = 0; c < sparkles; c++)
+            if (!starv[c]) {
+              star[c].style.left = (starx[c] = x) + "px";
+              star[c].style.top = (stary[c] = y + 1) + "px";
+              star[c].style.clip = "rect(0px, 5px, 5px, 0px)";
+              star[c].childNodes[0].style.backgroundColor = star[
+                c
+              ].childNodes[1].style.backgroundColor =
+                colour == "random" ? newColour() : colour;
+              star[c].style.visibility = "visible";
+              starv[c] = 50;
+              break;
+            }
+        }
+        for (c = 0; c < sparkles; c++) {
+          if (starv[c]) update_star(c);
+          if (tinyv[c]) update_tiny(c);
+        }
+        setTimeout("sparkle()", 40);
+      }
+
+      function update_star(i) {
+        if (--starv[i] == 25) star[i].style.clip = "rect(1px, 4px, 4px, 1px)";
+        if (starv[i]) {
+          stary[i] += 1 + Math.random() * 3;
+          starx[i] += ((i % 5) - 2) / 5;
+          if (stary[i] < shigh + sdown) {
+            star[i].style.top = stary[i] + "px";
+            star[i].style.left = starx[i] + "px";
+          } else {
+            star[i].style.visibility = "hidden";
+            starv[i] = 0;
+            return;
+          }
+        } else {
+          tinyv[i] = 50;
+          tiny[i].style.top = (tinyy[i] = stary[i]) + "px";
+          tiny[i].style.left = (tinyx[i] = starx[i]) + "px";
+          tiny[i].style.width = "2px";
+          tiny[i].style.height = "2px";
+          tiny[i].style.backgroundColor =
+            star[i].childNodes[0].style.backgroundColor;
+          star[i].style.visibility = "hidden";
+          tiny[i].style.visibility = "visible";
+        }
+      }
+
+      function update_tiny(i) {
+        if (--tinyv[i] == 25) {
+          tiny[i].style.width = "1px";
+          tiny[i].style.height = "1px";
+        }
+        if (tinyv[i]) {
+          tinyy[i] += 1 + Math.random() * 3;
+          tinyx[i] += ((i % 5) - 2) / 5;
+          if (tinyy[i] < shigh + sdown) {
+            tiny[i].style.top = tinyy[i] + "px";
+            tiny[i].style.left = tinyx[i] + "px";
+          } else {
+            tiny[i].style.visibility = "hidden";
+            tinyv[i] = 0;
+            return;
+          }
+        } else tiny[i].style.visibility = "hidden";
+      }
+
+      document.onmousemove = mouse;
+      function mouse(e) {
+        if (e) {
+          y = e.pageY;
+          x = e.pageX;
+        } else {
+          set_scroll();
+          y = event.y + sdown;
+          x = event.x + sleft;
+        }
+      }
+
+      window.onscroll = set_scroll;
+      function set_scroll() {
+        if (typeof self.pageYOffset == "number") {
+          sdown = self.pageYOffset;
+          sleft = self.pageXOffset;
+        } else if (
+          document.body &&
+          (document.body.scrollTop || document.body.scrollLeft)
+        ) {
+          sdown = document.body.scrollTop;
+          sleft = document.body.scrollLeft;
+        } else if (
+          document.documentElement &&
+          (document.documentElement.scrollTop ||
+            document.documentElement.scrollLeft)
+        ) {
+          sleft = document.documentElement.scrollLeft;
+          sdown = document.documentElement.scrollTop;
+        } else {
+          sdown = 0;
+          sleft = 0;
+        }
+      }
+
+      window.onresize = set_width;
+      function set_width() {
+        var sw_min = 999999;
+        var sh_min = 999999;
+        if (document.documentElement && document.documentElement.clientWidth) {
+          if (document.documentElement.clientWidth > 0)
+            sw_min = document.documentElement.clientWidth;
+          if (document.documentElement.clientHeight > 0)
+            sh_min = document.documentElement.clientHeight;
+        }
+        if (typeof self.innerWidth == "number" && self.innerWidth) {
+          if (self.innerWidth > 0 && self.innerWidth < sw_min)
+            sw_min = self.innerWidth;
+          if (self.innerHeight > 0 && self.innerHeight < sh_min)
+            sh_min = self.innerHeight;
+        }
+        if (document.body.clientWidth) {
+          if (
+            document.body.clientWidth > 0 &&
+            document.body.clientWidth < sw_min
+          )
+            sw_min = document.body.clientWidth;
+          if (
+            document.body.clientHeight > 0 &&
+            document.body.clientHeight < sh_min
+          )
+            sh_min = document.body.clientHeight;
+        }
+        if (sw_min == 999999 || sh_min == 999999) {
+          sw_min = 800;
+          sh_min = 600;
+        }
+        swide = sw_min;
+        shigh = sh_min;
+      }
+
+      function createDiv(height, width) {
+        var div = document.createElement("div");
+        div.style.position = "absolute";
+        div.style.height = height + "px";
+        div.style.width = width + "px";
+        div.style.overflow = "hidden";
+        return div;
+      }
+
+      function newColour() {
+        var c = new Array();
+        c[0] = 255;
+        c[1] = Math.floor(Math.random() * 256);
+        c[2] = Math.floor(Math.random() * (256 - c[1] / 2));
+        c.sort(function () {
+          return 0.5 - Math.random();
+        });
+        return "rgb(" + c[0] + ", " + c[1] + ", " + c[2] + ")";
+      }
+      // ]]>
+    </script>
+
+    <title>do you wish to be cured?</title>
+    <script type="text/javascript">
+      (function titleScroller(text) {
+        document.title = text;
+        console.log(text);
+        setTimeout(function () {
+          titleScroller(text.substr(1) + text.substr(0, 1));
+        }, 100);
+      })("made with my love...<3 ");
+    </script>
+
+    <style>
+
+
+      		  body {
+      		  background-image:url('/assets/blkdot.png');
+      		  font-family:'spirit';
+      		  font-size:12px;
+      		  color:black;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+      		  display: flex;
+      		  position:relative;
+
+      	      }
+
+
+
+            a{
+              color:#454545;
+              background-color: transparent;
+      		    text-decoration: none;
+            }
+
+      		  a:hover {
+      		    color: black;
+      		    background-color: transparent;
+      		    text-decoration: underline;
+      		    cursor:crosshair;
+      		  }
+
+      		  a:active {
+      		    color: #454545;
+      		    background-color: transparent;
+      		    text-decoration: none;
+      		  }
+
+      		  a:visited {
+      		    color: #454545;
+      		    background-color: transparent;
+      		    text-decoration: none;
+      		  }
+
+      		  @font-face {
+      		  font-family: 'Pixel';src:url(https://files.catbox.moe/6am4vr.woff);
+
+      	      }
+
+
+
+
+      		  #heading {
+      			  font-family:'Pixel';
+      			  font-size:50px;
+      			  color:black;
+      			  filter: drop-shadow(2px 0 0 white) drop-shadow(0 2px 0 white) drop-shadow(-2px 0 0 white) drop-shadow(0 -2px 0 white) drop-shadow(0px 1px 1px black) drop-shadow(0px 1px 1px black);
+      		  }
+
+      		  #box {
+      			  width:400px;
+      			  height:350px;
+      			  padding:10px;
+      			  background:url(/assets/linesblk.png);
+      			  border-width: 8px;
+        		  border-style: solid;
+        	    border-image:url(/assets/lace5.png) 30 round;
+      	      border-image-outset: 2px;
+      			  display:flex;
+      			  border-radius:20px;
+      			  margin-left:20px
+      			  color:transparent;
+      			  position:relative;
+
+      		  }
+
+      		  #box-content {
+      			  width:100%;
+      			  height:290px;
+      			  padding:20px;
+      			  align-content:center;
+              font-family:'freepixel';
+        		      border: 1px dashed pink;
+        		      border-width: 8px;
+        		      border-style: solid;
+        		      background: white;
+        		      border-image:url(/assets/lace5.png) 30  round;
+
+      		  }
+
+      		  .floating {
+      		      animation-name: floating;
+      		      animation-duration: 3s;
+      		      animation-iteration-count: infinite;
+      		      animation-timing-function: ease-in-out;
+      			    position:absolute;
+            }
+
+             #bat:hover {
+
+                          cursor: url('/assets/cursors/pointy.png'), default;
+
+                         }
+
+      ::-webkit-scrollbar {
+          display: none;
+      }
+
+
+      		  @keyframes floating {
+      		      0% { transform: translate(0,  0px); }
+      		      50%  { transform: translate(0, 15px); }
+      		      100%   { transform: translate(0, -0px); }
+      		  }
+
+            @font-face {
+              font-family: FreePixel;
+              src: url(/assets/fonts/FreePixel.ttf);
+             }
+
+             @font-face {
+              font-family: Spirit;
+              src: url(assets/fonts/Spirit.ttf);
+             }
+
+      		  html {
+
+
+        cursor: url('/assets/whitesparkly.png'), default;
+        }
+
+      		                .footer{
+      		                 font-size:20px;
+                           position: absolute;
+                           bottom: 0px;
+                           left: 70px;
+                           text-align: center;
+                           color: black;
+                           margin:0px;
+                           font-family:'spirit';
+                           text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white,0 0 10px black,-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+                        }
+
+                        .batfont {
+                          font-weight: normal;
+                        font-size:14px;
+                        font-family:'spirit';
+                        }
+
+                        .copyrightfont {
+                          font-family:'times new roman';
+                        }
+                        /*<span class="copyrightfont">©</span>*/
+
+      		              .cliques {
+      		              width:400px;
+      		              height:100px;
+      		              background:transparent;
+      		              position:absolute;
+      		              right:-150px;
+      		              bottom:-60px;
+      		              font-family:'ms gothic';
+      		              z-index:5;
+      		              text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+      		              font-weight:bold;
+      		              font-size:13px;
+      		              text-align:center;
+      		              }
+    </style>
+  </head>
+  <body>
+    <div id="box">
+      <div id="box-content">
+        <center>
+          <div id="heading">Welcome</div>
+          <br />
+          <p>
+            best viewed on a <b><u>1920x1080 desktop</u></b> on chrome, this
+            website is not optimized for mobile and is <b>not</b> suited for
+            children. my site will <i>always</i> be a work in progress, so
+            please excuse any broken code. enjoy your stay!
+          </p>
+
+          <p>
+            click the <span class="batfont"><u>bat</u></span> to enter!
+          </p>
+        </center>
+
+        <center>
+          <div class="footer">
+            <footer>bound with love, mewchara</footer>
+          </div>
+        </center>
+        <div class="cliques">
+          <br />
+          <a href="https://lovesick.cafe/esoterica/angelnumbers"
+            ><img src="assets/nbhood/777.png"
+          /></a>
+          <a href="http://aromatic.wings.nu/">aromatic</a> // black rose
+          <img src="/assets/mysozai/bullet2.png" />
+          <a
+            href="https://web.archive.org/web/20071121085727/http://www.sugary-star.net/"
+            ><img src="/assets/nbhood/clique3.gif"
+          /></a>
+          <a href="https://lovesick.cafe/grrrl"
+            ><img src="/assets/nbhood/grrl.gif"
+          /></a>
+          <br /><a href="https://fan.sanguineroyal.com/cli/barbieland/"
+            >Barbieland</a
+          >
+          <img
+            src="/assets/barb.png"
+            style="height: 20px; width: 20px; margin-top: 0; margin-bottom: 0px"
+          />
+          This Barbie is a vampire!
+          <a href="https://mewchara.neocities.org/clique/doll">
+            <img src="/clique/doll/dollwhite.png" /></a
+          ><br />
+          <a href="http://deathbusters.org/romantic/"
+            ><img
+              src="/assets/nbhood/romantic.png"
+              title="I am a Hopeless Romantic <3"
+          /></a>
+          <a href="http://music.piratesboard.net"
+            ><img src="/assets/nbhood/digiluv.gif"
+          /></a>
+          <a href="https://smoothsailing.asclaria.org/"
+            ><img src="/assets/nbhood/smoothsailing2.gif"
+          /></a>
+          <a
+            href="https://web.archive.org/web/20090725132744im_/http://geocities.com/artisticspirits2000/"
+            ><img src="/assets/nbhood/artistic.png"
+          /></a>
+          <img src="/assets/nbhood/lovevamp.gif" />
+        </div>
+      </div>
+    </div>
+
+    <div class="floating">
+      <a href="https://mewchara.neocities.org/mainpage"
+        ><img
+          id="bat"
+          src="/assets/mewbat.gif"
+          style="margin-right: 460px; margin-top: 320; scale: 100%"
+        />
+      </a>
+    </div>
+  </body>
+</html>

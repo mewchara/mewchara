@@ -1,0 +1,444 @@
+<html>
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+                        <title>do you wish to be cured?</title>    	
+                        <script type="text/javascript">
+                        (function titleScroller(text) {
+                                document.title = text;
+                                console.log(text);
+                                setTimeout(function () {
+                                    titleScroller(text.substr(1) + text.substr(0, 1));
+                                }, 100);
+                            }("c u r e "));
+                        </script>
+        
+        <link rel="icon" type="image/x-icon" href="/personal/crown.gif">
+        
+    <style>
+    html { 
+                        cursor: url('/assets/whitesparkly.png'), auto; 
+                      }
+                        
+                      body {
+                      color:black; 
+                      background-color:#DEECE5;
+                      font-family: 'basiic';
+                      background:url(/personal/bglace2.png) bottom repeat-x,url(/personal/bglace.png) top repeat-x, url(/personal/blackstripe2.png);
+                      font-size: 16px;
+                      
+                      text-align:left;
+                      overflow:hidden;
+                      position:relative;
+                     
+                      }
+                      
+                      ::-webkit-scrollbar { display: none; }
+                  
+                		  @font-face {
+                		    font-family: 'Pixel';
+                		    src: url(/assets/fonts/Pixel.woff);
+                      }
+                      
+                      @font-face {
+                		    font-family: 'basiic';
+                		    src: url(/assets/fonts/basiic.ttf);
+                      }
+                      
+                      @font-face {
+                		    font-family: 'infer';
+                		    src: url(assets/fonts/Infernalda.ttf);
+                      }
+                      
+                      @font-face {
+                		    font-family: 'rom';
+                		    src: url(assets/fonts/RomanceA.ttf);
+                      }
+                	      
+                	   @font-face {
+                		    font-family: 'kings';
+                		    src: url(/assets/fonts/kings.otf);
+                      }
+                   
+                      @font-face {
+                        font-family: FreePixel;
+                        src: url(/assets/fonts/FreePixel.ttf);
+                       }
+                       
+                       @font-face {
+                        font-family: Spirit;
+                        src: url(/assets/fonts/Spirit.ttf);
+                       }
+                       
+                       @font-face {
+                        font-family: rainyhearts;
+                        src: url(/assets/fonts/rainyhearts.ttf);
+                       }
+                       
+                       @font-face {
+                        font-family: angelwish;
+                        src: url(/assets/fonts/angelwish.ttf);
+                       }
+                       
+                       @font-face {
+                        font-family: choco;
+                        src: url(assets/fonts/Chocolatier.ttf);
+                       }
+                       
+                       @font-face {
+                        font-family: pop;
+                        src: url(assets/fonts/PopBoutique.ttf);
+                       }
+                       
+                      ::-webkit-scrollbar {
+                      width:3px;
+                      height: 3px;
+                      background: black;
+                      
+                      }
+                      ::-webkit-scrollbar-track {
+                      border: 
+                      border-radius: 0px;
+                      }
+                      ::-webkit-scrollbar-thumb {
+                      background: #5c5c5c;  
+                      border-radius: 0px;
+                      border: 
+                      }
+                      
+
+                      
+                      ::selection {
+                          color: white;
+                          background: gray;
+                        }
+                        
+                    .container {
+                     width:850px;
+                     height:360px;
+                     background:url(/assets/linesblk.png);
+                     margin: auto;
+                     margin-top:100px;
+                     display:flex;
+                     position:relative;
+                     border: 1px solid white;
+                     padding:15px;
+                    }
+                    
+                    .container1 {
+                     background:url(/personal/wpblkcrest.gif);
+                     border-left:1px solid white;
+                     border-top:1px solid white;
+                     border-bottom:1px solid white;
+                     width:90%;
+                     padding:13px;
+                     margin:auto;
+                     height:320px;
+                     position:relative;
+                    }
+                    
+                    .container2 {
+                     background:url(/personal/wpblk.gif);
+                     border:1px solid white;
+                     width:10%;
+                     padding:13px;
+                     margin:auto;
+                     height:320px;
+                     position:relative;
+                    }
+                    
+                    .inner1 {
+                     background:url(/assets/blackbrdr2.gif) repeat-x, url(/assets/linesgray.png);
+                     width:96.5%;
+                     padding:13px;
+                     margin:auto;
+                     height:295px;
+                   overflow-y:auto;
+                   overflow-x:hidden;
+                    }
+                    
+                    .inner2 {
+                     background:url(/personal/blacklace4.gif) top repeat-x,url(/personal/blacklace4.gif) bottom repeat-x, url(/assets/linesgray.png);
+                     width:70%;
+                     padding:13px;
+                     margin:auto;
+                     height:295px;
+                     overflow:auto;
+                     align-content:center; 
+                    }
+                    
+                    #header {
+                    font-family:georgia;
+                    position:absolute;
+                    color:white;
+                    top: -60px;
+                    text-align: left;
+                    left: -20px;
+                    width:auto;
+                    }
+                    
+                    h1 {
+                    display: inline;
+                    font-family: 'kings';
+                    font-size: 70px;
+                    letter-spacing: 1px;
+                    color:black;
+                    filter: drop-shadow(2px 0 0 white) drop-shadow(0 2px 0 white) drop-shadow(-2px 0 0 white) drop-shadow(0 -2px 0 white) drop-shadow(0px 1px 1px gray) drop-shadow(0px -1px 3px gray);
+                    z-index:6;
+                    }
+                    
+                    .menu {
+                     position:absolute;
+                     margin-left:-15px;
+                     margin-top:-130px;
+                    }
+                    
+                    #menutext {
+                     padding:4px; 
+                     width: auto;
+                     height: auto;
+                     max-width: 100%;
+                    }
+                    
+                    #menutext:hover {
+                     padding:10px;
+                     cursor:crosshair;
+                     filter: drop-shadow(0px 0px 10px black);
+                     margin-left:-15px;
+                    }
+                    
+                    .inner1text {
+                     width:400px;
+                     height:230px;
+                     margin:auto;
+                     border-style: solid;
+                     margin-right:13px;
+                     border-image: url("/assets/blklace.png") 45 fill round;
+                     border-image-outset:10px;
+                     border-width:10px;
+                     align-content:center;
+                     display: flex;
+                    }
+                    
+                    #kurodoll {
+                    position:absolute;
+                    left:820px;
+                    /*transform: scaleX(-1);*/
+                    z-index:2;
+                    filter: brightness(100%);
+                    }
+                    
+                    .icon {
+                    border-width: 7px;
+                    border-style: solid;
+                    border-image: url("/assets/blklace3.png") 7 fill round;
+                    filter: drop-shadow(0px 0px 3px #d4d4d4);
+                    z-index:1;
+                    }
+                    
+                    .inner1text2 {
+                    background:url(/assets/linesblk.png);
+                    width:460px;
+                    height:230px;
+                    margin:auto;
+                    align-content:center;
+                    justify-content:center;
+                    display: flex;
+                    }
+                    
+                    .inner1text3 {
+                    background:white;
+                    width:375px;
+                    height: 205px;
+                    margin:auto;
+                    padding:5px;
+                    border:1px black solid;
+                    text-shadow: 0px 0px 3px lightgray;
+                    text-align:left;
+                    overflow-y:auto;
+                    }
+                    
+                    .text1{
+                      font-family:'kings';
+                      font-weight:bold;
+                      font-size:20px;
+                      color:white;
+                      filter: drop-shadow(1px 0 0 black) drop-shadow(0 1px 0 black) drop-shadow(-1px 0 0 black) drop-shadow(0 -1px 0 black) ;
+                      text-shadow:none;
+                    }
+                    
+                    .blinkies {
+                     width:500px;
+                     float:right;
+                     position:relative;
+                     right:-26px;
+                    }
+                    
+                    .schmancy {
+                    color: black;
+                    font-family: Spirit;
+                    font-size: 30px;
+                    filter: drop-shadow(2px 0 0 white) drop-shadow(0 2px 0 white) drop-shadow(-2px 0 0 white) drop-shadow(0 -2px 0 white) drop-shadow(0px 1px 1px black) drop-shadow(0px 1px 1px black);
+                    font-weight:normal;
+                    }
+                    
+                                        /* Sticker Sheet Club Styling
+                    http://www.stickersheetclub.neocities.org 
+                    */
+                    
+                    /* Table Styling */
+                    table {
+                      background-color: gray; 
+                      border: 1px solid gray;
+                      width: 250px;
+                    }
+                		/* Space between the stickers */
+                		td img {
+                      padding:0px 15px;
+                		}
+                	
+                    /* Black shadow around stickers
+                    You can change or remove this if you want */
+                		.stickersimg img {
+                    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.5));
+                		}
+                			
+                    /* To customize mulitple sets of tables:
+                    Each sticker sheet has 3 tables: ssclubheader_#, ssclubstickers_#, and #ssclubfooter_#. 
+                    Give each set of tables a different number.
+                    */
+                	    
+                    #ssclubheader_1 {
+                    /* You can use the background header image code here and remove it from the HTML.
+                     background-image:url('https://stickersheetclub.neocities.org/images/stickersheetheader.png'); 
+                    background-repeat: no-repeat; 
+                    background-position: top center;
+                    */
+                    }
+                			
+                  	#ssclubstickers_1 {
+                    /* You can add a different background color or image here too! */
+                    }
+                			
+                    #ssclubfooter_1 {
+                    /* Here too! */
+                    }
+                      
+    </style>
+    
+</head>
+
+<body>
+      <center>
+        <div class="container">
+          <div class="container1">
+            <div class="inner1">
+                    <div id="header"><h1>The Webmistress</h1></div>
+                    <img id="kurodoll" src="/personal/kuronew.webp">
+                    <br>
+                    <br>
+                  <span align="left" class="schmancy">Rpg Club</span>
+                  <br>
+                  <br>
+                  
+                   <img src="/assets/nbhood/mewchararpg.gif"><a href="https://hillhouse.neocities.org/" target="_blank"> <img src="https://sweetcharm.net/.CuteDesktop/Website/RPGClub/members/hillhouse.gif"></a><a href="https://pomelo.lol/" target="_blank"><img src="https://sweetcharm.net/.CuteDesktop/Website/RPGClub/members/rpgpomelo.gif"></a><a href="https://freshflesh.ivyro.net/" target="_blank"><img src="https://sweetcharm.net/.CuteDesktop/Website/RPGClub/members/ivyro1.gif"></a><a href="https://sweetcharm.net/" target="_blank"><img border="0" height="100" src="https://sweetcharm.net/.CuteDesktop/Website/RPGClub/SweetCharmRPG.gif" width="100"> </a>
+                    
+                   <br>
+                   <br>
+                   <a style="color:black; text-decoration:none;" href="https://sweetcharm.net/.CuteDesktop/Website/RPGClub/index.html"> join here! </a>
+                    <br>
+                    <br>
+                  <span align="left" class="schmancy">Sticker Sheet Club</span>
+                  <br>
+                  <br>
+                                                        <!-- Sticker Sheet Club Header
+                    Don't forget to add the CSS code into your HEAD tags or your page's stylesheet -->
+                    <table id="ssclubheader_1" style="background-image:url('https://stickersheetclub.neocities.org/images/stickersheetheader.png'); background-repeat: no-repeat; background-position: top center;" height="80">
+                    <tr>
+                    <th>
+                    <!-- Fancy Text Generator 
+                    https://lingojam.com/FancyTextGenerator -->
+                    <div style="font-family: spirit; font-size: 12px; color: black;"><img src="/personal/bullet.png"> My Sticker Sheet <img src="/personal/bullet.png"></div>
+                    </th>
+                    </tr>
+                    </table>
+                    <!-- Sticker Sheet Club Stickers Go Here -->
+                    <table id="ssclubstickers_1" class="stickersimg" height="100" >
+                    <tr>
+                    <!--<td><center> <a href=""><img src="personal/luv/miao.png"></a> <a href="https://cinni.net/"><img src="personal/luv/wingcinni.png"></a> <a href="https://gloomlee.neocities.org/stickersheetclub/"><img src="personal/luv/scream.gif"><a href="https://ales-playground.neocities.org/cute-stickers"><img src="personal/luv/ruby.gif"></a></a>  </center></td>-->
+                    </tr>
+
+                    </table>
+                    <!-- Sticker Sheet Club Footer -->
+                    <table id="ssclubfooter_1" style="background-color: #fff; border: 1px solid gray;" width="240">
+                    <tr><th>
+                    <center><a href="http://stickersheetclub.neocities.org/" target="_new"><img src="http://stickersheetclub.neocities.org/images/stickersheetclublogo.png"></a></center>
+                    </th></tr>
+                    </table>
+                  <br>
+                  <br>
+                  
+                                      <!-- Sticker Sheet Club Header
+                    Don't forget to add the CSS code into your HEAD tags or your page's stylesheet -->
+                    <table id="ssclubheader_1" style="background-image:url('https://stickersheetclub.neocities.org/images/stickersheetheader.png'); background-repeat: no-repeat; background-position: top center;" height="80">
+                    <tr>
+                    <th>
+                    <!-- Fancy Text Generator 
+                    https://lingojam.com/FancyTextGenerator -->
+                    <div style="font-family: spirit; font-size: 12px; color: black;"><img src="/personal/bullet.png"> My Sticker Collection <img src="/personal/bullet.png"></div>
+                    </th>
+                    </tr>
+                    </table>
+                    <!-- Sticker Sheet Club Stickers Go Here -->
+                    <table id="ssclubstickers_1" class="stickersimg" height="100" >
+                    <tr>
+                    <td><center> <a href="https://cinni.net/"><img src="/personal/luv/miao.png"></a> <a href="https://cinni.net/"><img src="/personal/luv/wingcinni.png"></a> <a href="https://gloomlee.neocities.org/stickersheetclub/"><img src="/personal/luv/scream.gif"><a href="https://ales-playground.neocities.org/cute-stickers"><img src="/personal/luv/ruby.gif"></a></a>  </center></td>
+                    </tr>
+                    <tr>
+                    <td><center> <a href="https://artwork.neocities.org/toybox"><img src="/personal/luv/betty.gif"></a> <a href="https://artwork.neocities.org/toybox"><img src="/personal/luv/rilakkuma.png"></a> <a href="https://rabbitnet.neocities.org/pixel"><img src="/personal/luv/baby_sticker.png"></a> <a href="https://vampirevalentine.neocities.org/"><img src="/personal/luv/ouSsVrB.png"></a> </center></td>
+                    </tr>
+                    <tr>
+                    <td><center> <a href="https://hillhouse.neocities.org/cliques"><img src="/personal/luv/cameo.gif"></a> <a href="https://pastelhello.com/"><img src="/personal/luv/tama.gif"></a> <a href="https://pastelhello.com/"><img src="/personal/luv/teapot.gif"></a>  </center></td>
+                    </tr>
+                    <tr>
+                    <td><center> <a href="https://pastelhello.com/"><img src="/personal/luv/dratini.gif"></a> <a href="https://pastelhello.com/"><img src="/personal/luv/heart.gif"></a>  </center></td>
+                    </tr>
+                    <tr>
+                   
+                    </tr>
+                    </table>
+                    <!-- Sticker Sheet Club Footer -->
+                    <table id="ssclubfooter_1" style="background-color: #fff; border: 1px solid gray;" width="240">
+                    <tr><th>
+                    <center><a href="http://stickersheetclub.neocities.org/" target="_new"><img src="http://stickersheetclub.neocities.org/images/stickersheetclublogo.png"></a></center>
+                    </th></tr>
+                    </table>
+                  <br>
+                  <br>
+
+
+            </div>
+          </div>
+          <div class="container2">
+            <div class="inner2">
+            <br>
+            
+                <div class="menu">
+                <a href='/webmistress'><img id=menutext src='/personal/about.gif'></a><br>
+                <a href='/webmistress/love'><img id=menutext src='/personal/love.gif'></a><br>
+                <a href='/webmistress/diary'><img id=menutext src='/personal/diary.gif'></a><br>
+                <a href='/webmistress/gallery'><img id=menutext src='/personal/gallery.gif'></a><br>
+                <a href='/webmistress/music'><img id=menutext src='/personal/music.gif'></a><br>
+                <a href='/webmistress/link'><img id=menutext src='/personal/link.gif'></a><br>
+                <a href='/mainpage'><img id=menutext src='/personal/back.gif'></a>
+                </div>
+            </div>
+          </div>
+        </div>
+
+      </center>
+</body>
+
+</html>
