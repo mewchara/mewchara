@@ -24,6 +24,11 @@
 }
 
 @font-face {
+  font-family: "faith";
+  src: url(/assets/fonts/FaithCollapsing.ttf);
+}
+
+@font-face {
   font-family: "gothitch";
   src: url(/assets/fonts/itchgothic.ttf);
 }

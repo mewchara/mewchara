@@ -1,54 +1,78 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>..sowwy</title>
-    <link rel="icon" type="image/x-icon" href="/assets/mew32.gif">
-    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>go back ..?</title>
+    <link rel="icon" type="image/x-icon" href="/assets/mew32.gif" />
+    <link rel="stylesheet" href="cured.css" />
   </head>
   <body>
-  
-   <style>
-  
-  body {
-  color:#ffffff; 
-  background-color:#DEECE5;
+    <style>
+      body {
+        color: #ffffff;
+        background-color: #deece5;
+        background-image: url(/assets/mysozai/blkhart.png);
+        background-attachment: fixed;
+        background-repeat: repeat;
+        font-family: "garamond";
+        font-size: 12px;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        display: flex;
+      }
 
-  background-image:url(/assets/blackbow.png);
-  background-attachment:fixed;
-  background-repeat:repeat;
-  font-family:'FreePixel';
-		  font-size:12px;
-		  color:white;
-          justify-content: center;
-          align-items: center;
-          min-height: 100vh;
-		  display: flex; 
-  
-  }
-		  
-		  @font-face {
-		  font-family: 'Pixel';src:url(/assets/fonts/Pixel.woff);
+      #heading {
+        font-family: "exmouth";
+        font-size: 80px;
+        color: white;
+        text-shadow: 0px 0px 5px white;
+      }
 
-	      }
-	  
-		  #heading {
-			  font-family:'Pixel';
-			  font-size:50px;
-			  color:white;
-			  text-shadow: 0px 0px 5px white;
-		  }
-		  
-		   @font-face {
-        font-family: FreePixel;
-        src: url(/assets/fonts/FreePixel.ttf);
-       }
-		  
-		</style>
-		
-			  <center>
-				  <div id='heading'>Page not found</div>
-				  <p> this site is currently under construction! check back later </p> </center> 
-    </body>
+      #goback {
+        font-family: "faith";
+        font-size: 20px;
+        color: white;
+        text-shadow: 0px 0px 5px white;
+        text-decoration: none;
+      }
+
+      a:link {
+        color: white;
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      a:visited {
+        color: white;
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #dcdcdc;
+        background-color: transparent;
+        text-decoration: none;
+        cursor: crosshair;
+      }
+
+      @font-face {
+        font-family: exmouth;
+        src: url(/assets/fonts/exmouth.ttf);
+      }
+
+      @font-face {
+        font-family: "faith";
+        src: url(/assets/fonts/FaithCollapsing.ttf);
+      }
+    </style>
+
+    <center>
+      <div id="heading">The Void Beckons</div>
+      <p>this page has withered away… only echoes remain.</p>
+      <div id="goback"><a href="/mainpage.html"> go back..? </a></div>
+    </center>
+  </body>
 </html>

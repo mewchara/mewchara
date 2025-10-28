@@ -85,6 +85,16 @@ body {
   src: url(assets/fonts/PopBoutique.ttf);
 }
 
+@font-face {
+  font-family: qaskin;
+  src: url(/assets/fonts/QaskinBlack.ttf);
+}
+
+@font-face {
+  font-family: exmouth;
+  src: url(/assets/fonts/exmouth.ttf);
+}
+
 * {
   image-rendering: pixelated;
 }
