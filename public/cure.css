@@ -425,7 +425,7 @@ button:hover {
 
 .guestbookdiv {
   margin-top: -10px;
-  width: 156px;
+  width: 160px;
   height: 122px;
   background: url(/assets/linesgray.png);
   align-content: center;
@@ -434,8 +434,6 @@ button:hover {
   border-style: solid;
   border-width: 8px;
   border: 1px black solid;
-  border-image: url(/assets/lace5.png) 40 round;
-  border-image-outset: 2px;
   margin-left: -4px;
   z-index: 2;
 }
@@ -479,14 +477,14 @@ button:hover {
 textarea {
   border: 1px solid black;
   color: black;
-  height: 35px;
+  height: 50px;
   width: 130px;
   margin: 0 auto;
   margin-top: -17px;
   margin-bottom: 10px;
   border-radius: 3px;
-  box-shadow: inset #ffe6f2 0 5px 3px -3px, inset #bbbbbb 0 0 5px,
-    inset #fffbfb 0 0 16px, #ffffff 0 0 3px;
+  box-shadow: inset #d3d3d3 0 5px 3px -3px, inset #bbbbbb 0 0 5px,
+    inset #e8e8e8 0 0 16px, #ffffff 0 0 3px;
 }
 
 #linkboxtext {
@@ -551,8 +549,8 @@ textarea {
   background-color: white;
   padding: 2px;
   border-radius: 3px;
-  box-shadow: inset #ffe6f2 0 5px 3px -3px, inset #bbbbbb 0 0 5px,
-    inset #fffbfb 0 0 16px, #ffffff 0 0 3px;
+  box-shadow: inset #d5d5d5 0 5px 3px -3px, inset #bbbbbb 0 0 5px,
+    inset #dedede 0 0 16px, #ffffff 0 0 3px;
   color: black;
   font-size: 13px;
   border: 1px solid black;
@@ -769,7 +767,7 @@ textarea {
 .communitylong {
   background: white;
   height: 400px;
-  width: 300px;
+  width: 350px;
   border: 1px white solid;
 }
 
@@ -782,7 +780,7 @@ textarea {
   background: url(/assets/frames/heartline3.gif) repeat-x,
     url(/assets/linesgray.png);
   height: 140px;
-  width: 260px;
+  width: 300px;
   border: 1px white solid;
   overflow: auto;
   margin-left: 20px;
@@ -790,9 +788,9 @@ textarea {
 }
 
 .commtext1 {
-  padding: 15px;
-  filter: saturate(50%);
-  margin-left: 25px;
+  padding: 5px;
+  filter: saturate(0%);
+  margin-left: 7px;
 }
 
 .commtext1:hover {
@@ -801,15 +799,15 @@ textarea {
 
 .comm2 {
   background: url(assets/anotherlace2.png) repeat-x,
-    url(/assets/mysozai/whitetile2.png);
+    url(/personal/wpblkcrest.gif);
   height: 50%;
 }
 
 .comm2inner {
   background: url(/assets/frames/heartlineframe.gif) repeat-x,
-    url(/assets/blkarg.png);
+    url(/assets/linesgray.png);
   height: 140px;
-  width: 260px;
+  width: 300px;
   border: 1px black solid;
   overflow: auto;
   margin-left: 19px;

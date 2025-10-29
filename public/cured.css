@@ -57,3 +57,7 @@
   font-family: "magnolia";
   src: url(/assets/fonts/MagnoliaScript.otf);
 }
+
+* {
+  image-rendering: pixelated;
+}
